@@ -6,3 +6,4 @@ node_modules
 *.project-workspace
 *.sublime-workspace
 sql.config.php
+.sass-cache
