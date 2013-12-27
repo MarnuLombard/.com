@@ -8,6 +8,10 @@
 
 <head>
 	<meta charset="utf-8" />
+	<!--
+		TODO:
+		Add metadata
+	 -->
 	<meta name="author" content="" />
 	<meta name="copyright" content="" />
 	<meta name="description" content="" />

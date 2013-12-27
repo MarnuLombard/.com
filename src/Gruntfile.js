@@ -24,6 +24,10 @@ module.exports = function(grunt) {
         ],
         tasks: ['concat']
       },
+      svg: {
+        files: ['svg/*'],
+        tasks: ['svgmin']
+      },
       livereload: {
         options: { livereload: true },
         files: [
@@ -36,6 +40,7 @@ module.exports = function(grunt) {
     }, // end watch
 
     // Compress all svg files
+    // (Not the ones used for icon-fonts)
     svgmin: {
       options: {
         plugins: [{
@@ -45,7 +50,7 @@ module.exports = function(grunt) {
       dist: {
         files: [{
           expand: true,
-          cwd: 'src/img',
+          cwd: 'svg',
           src: ['**/*.svg'],
           dest: '../dist/img/',
           ext: '.svg'
@@ -134,12 +139,25 @@ module.exports = function(grunt) {
           ]
         }
       }
-    }
+    },
+
+    // Create a list of all the Todos in the project
+    // todos: {
+    //   options: {
+    //     priorities : {
+    //      low : null,
+    //      med : /TODO/,
+    //      high : /FIXME/
+    //     },
+    //     verbose: false
+    //   },
+    //   TODO : ['scss/*', 'scss/**/*', 'js/*.js' , 'js/**/*.js' , '../dist/*.php' , '../dist/includes/**/*.php']
+    // }
 
   });
 
   // register task
   grunt.registerTask('dev', ['watch']);
-  grunt.registerTask('dist', ['webfont', 'sass:dist', 'concat:dist', 'uglify:dist']);
+  grunt.registerTask('dist', ['sass:dist', 'concat:dist', 'uglify:dist', 'svgmin:dist']);
 
 };

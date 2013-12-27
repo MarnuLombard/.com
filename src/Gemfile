@@ -1,3 +1,4 @@
+# ` bundle install ` on parent folder
 source "https://rubygems.org"
 
 gem "sass-globbing"

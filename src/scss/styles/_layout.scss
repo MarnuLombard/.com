@@ -1,16 +1,12 @@
 body * {
 	zoom: 1;
-	box-sizing: border-box;
+	@include box-sizing(border-box);
 }
 
 // to wrap all grid objects
 //to give all rows a bit of spacing
-section,
-.section {
-	@extend .clearfix;
-}
-
-section {
+.main {
+	@extend %clearfix;
 	margin-left: auto;
 	margin-right: auto;
 	padding: 0;

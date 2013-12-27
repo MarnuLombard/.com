@@ -5,3 +5,4 @@ node_modules
 *.sublime-project
 *.project-workspace
 *.sublime-workspace
+sql.config.php

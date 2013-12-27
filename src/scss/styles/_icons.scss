@@ -7,7 +7,9 @@
 // Icon list (corresponds to icon font characters)
 // Note associative arrays will be easier in Sass version 3.3: https://github.com/nex3/sass/issues/642
 $icons: (
-
+  'github' '\f100',
+  'reload' '\f101',
+  'twitter' '\f102'
 );
 
 // Automagically Set up a class name for each icon

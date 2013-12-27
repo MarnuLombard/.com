@@ -7,4 +7,9 @@
 // See : http://beta.compass-style.org/reference/compass/support/
 // and http://beta.compass-style.org/help/documentation/tuning-vendor-prefixes/
 // The defaults are acceptable for most vars
-$browser-minimum-version : (ie: '7', firefox: '6');
+$browser-minimum-version : (ie: '8', firefox: '8');
+
+$legacy-support-for-ie6: false;
+$legacy-support-for-ie7: false;
+$legacy-support-for-ie8: true;
+

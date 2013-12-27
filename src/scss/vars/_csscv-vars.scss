@@ -1,0 +1,36 @@
+
+/*------------------------------------*\
+    #SETTINGS
+\*------------------------------------*/
+/**
+ * How big would you like your tabs to be?
+ */
+$tab-size:  2;
+
+
+/**
+ * Colour settings.
+ */
+$color--blue--dark:     #002935;
+$color--blue--light:    #0083ce;
+$color--grey--dark:     #7f9597;
+$color--grey--light:    #4f6c73;
+$color--mustard:        #b58a0a;
+$color--turquoise:      #00a19b;
+
+
+/**
+ * Reassign colour variables to better names.
+ */
+$color--background:     $color--blue--dark;
+$color--text:           $color--grey--light;
+$color--comment:        $color--grey--dark;
+$color--selector:       $color--blue--light;
+$color--braces:         $color--blue--light;
+$color--property:       $color--mustard;
+$color--value:          $color--mustard;
+$color--colons:         $color--grey--dark;
+$color--string:         $color--turquoise;
+$color--number:         $color--turquoise;
+
+

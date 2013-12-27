@@ -13,11 +13,11 @@
 		font-size: 0.9em;
 		font-weight: 200;
 		@include border-radius(3px);
-		border: 1px solid $color-gre_light;
+		border: 1px solid $color-grey_light;
 
 		&:focus {
 			outline-offset: -2px;
-			outline: $color- auto 5px;
+			outline: $color-primary_light auto 5px;
 		}
 	}
 
