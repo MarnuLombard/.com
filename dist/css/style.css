@@ -55,13 +55,22 @@ will output all the modifiers, regardless of source-order
   }
 }
 */
-.main:after {
-  content: "";
-  display: table;
-  clear: both; }
+.nav--main .nav--transition {
+  display: -moz-inline-stack;
+  display: inline-block;
+  zoom: 1;
+  *display: inline;
+  vertical-align: top; }
 
 /* ==============[ Bulletproof fontface mixin ]============== */
 /* ==============[ Basic Gradient mixin ]============== */
+.nav--main .nav--transition {
+  display: -moz-inline-stack;
+  display: inline-block;
+  zoom: 1;
+  *display: inline;
+  vertical-align: top; }
+
 /*
   See here: http://davidwalsh.name/rem-px-browser-function-sass
 
@@ -118,6 +127,22 @@ will output all the modifiers, regardless of source-order
   */
 /* 1 */
 /* ==============[ Mixin forr css svg images ]============== */
+.nav--main .nav--transition span {
+  font: 0/0 a;
+  color: transparent;
+  text-shadow: none;
+  background-color: transparent;
+  border: 0; }
+
+.float--right {
+  float: right; }
+
+section:after,
+.section:after {
+  content: "";
+  display: table;
+  clear: both; }
+
 /*------------------------------------*\
     CSSCV
 \*------------------------------------*/
@@ -825,6 +850,369 @@ will output all the modifiers, regardless of source-order
 
   .desk--eleven-twelfths {
     width: 91.666%; } }
+[class*="push--"] {
+  position: relative; }
+
+.push--one-whole {
+  left: 100%; }
+
+.push--one-half, .push--two-quarters, .push--three-sixths, .push--four-eighths, .push--five-tenths, .push--six-twelfths {
+  left: 50%; }
+
+.push--one-third, .push--two-sixths, .push--four-twelfths {
+  left: 33.333%; }
+
+.push--two-thirds, .push--four-sixths, .push--eight-twelfths {
+  left: 66.666%; }
+
+.push--one-quarter, .push--two-eighths, .push--three-twelfths {
+  left: 25%; }
+
+.push--three-quarters, .push--six-eighths, .push--nine-twelfths {
+  left: 75%; }
+
+.push--one-fifth, .push--two-tenths {
+  left: 20%; }
+
+.push--two-fifths, .push--four-tenths {
+  left: 40%; }
+
+.push--three-fifths, .push--six-tenths {
+  left: 60%; }
+
+.push--four-fifths, .push--eight-tenths {
+  left: 80%; }
+
+.push--one-sixth, .push--two-twelfths {
+  left: 16.666%; }
+
+.push--five-sixths, .push--ten-twelfths {
+  left: 83.333%; }
+
+.push--one-eighth {
+  left: 12.5%; }
+
+.push--three-eighths {
+  left: 37.5%; }
+
+.push--five-eighths {
+  left: 62.5%; }
+
+.push--seven-eighths {
+  left: 87.5%; }
+
+.push--one-tenth {
+  left: 10%; }
+
+.push--three-tenths {
+  left: 30%; }
+
+.push--seven-tenths {
+  left: 70%; }
+
+.push--nine-tenths {
+  left: 90%; }
+
+.push--one-twelfth {
+  left: 8.333%; }
+
+.push--five-twelfths {
+  left: 41.666%; }
+
+.push--seven-twelfths {
+  left: 58.333%; }
+
+.push--eleven-twelfths {
+  left: 91.666%; }
+
+@media only screen and (max-width: 480px) {
+  .push--palm--one-whole {
+    left: 100%; }
+
+  .push--palm--one-half, .push--palm--two-quarters, .push--palm--three-sixths, .push--palm--four-eighths, .push--palm--five-tenths, .push--palm--six-twelfths {
+    left: 50%; }
+
+  .push--palm--one-third, .push--palm--two-sixths, .push--palm--four-twelfths {
+    left: 33.333%; }
+
+  .push--palm--two-thirds, .push--palm--four-sixths, .push--palm--eight-twelfths {
+    left: 66.666%; }
+
+  .push--palm--one-quarter, .push--palm--two-eighths, .push--palm--three-twelfths {
+    left: 25%; }
+
+  .push--palm--three-quarters, .push--palm--six-eighths, .push--palm--nine-twelfths {
+    left: 75%; }
+
+  .push--palm--one-fifth, .push--palm--two-tenths {
+    left: 20%; }
+
+  .push--palm--two-fifths, .push--palm--four-tenths {
+    left: 40%; }
+
+  .push--palm--three-fifths, .push--palm--six-tenths {
+    left: 60%; }
+
+  .push--palm--four-fifths, .push--palm--eight-tenths {
+    left: 80%; }
+
+  .push--palm--one-sixth, .push--palm--two-twelfths {
+    left: 16.666%; }
+
+  .push--palm--five-sixths, .push--palm--ten-twelfths {
+    left: 83.333%; }
+
+  .push--palm--one-eighth {
+    left: 12.5%; }
+
+  .push--palm--three-eighths {
+    left: 37.5%; }
+
+  .push--palm--five-eighths {
+    left: 62.5%; }
+
+  .push--palm--seven-eighths {
+    left: 87.5%; }
+
+  .push--palm--one-tenth {
+    left: 10%; }
+
+  .push--palm--three-tenths {
+    left: 30%; }
+
+  .push--palm--seven-tenths {
+    left: 70%; }
+
+  .push--palm--nine-tenths {
+    left: 90%; }
+
+  .push--palm--one-twelfth {
+    left: 8.333%; }
+
+  .push--palm--five-twelfths {
+    left: 41.666%; }
+
+  .push--palm--seven-twelfths {
+    left: 58.333%; }
+
+  .push--palm--eleven-twelfths {
+    left: 91.666%; } }
+@media only screen and (min-width: 481px) and (max-width: 1023px) {
+  .push--lap--one-whole {
+    left: 100%; }
+
+  .push--lap--one-half, .push--lap--two-quarters, .push--lap--three-sixths, .push--lap--four-eighths, .push--lap--five-tenths, .push--lap--six-twelfths {
+    left: 50%; }
+
+  .push--lap--one-third, .push--lap--two-sixths, .push--lap--four-twelfths {
+    left: 33.333%; }
+
+  .push--lap--two-thirds, .push--lap--four-sixths, .push--lap--eight-twelfths {
+    left: 66.666%; }
+
+  .push--lap--one-quarter, .push--lap--two-eighths, .push--lap--three-twelfths {
+    left: 25%; }
+
+  .push--lap--three-quarters, .push--lap--six-eighths, .push--lap--nine-twelfths {
+    left: 75%; }
+
+  .push--lap--one-fifth, .push--lap--two-tenths {
+    left: 20%; }
+
+  .push--lap--two-fifths, .push--lap--four-tenths {
+    left: 40%; }
+
+  .push--lap--three-fifths, .push--lap--six-tenths {
+    left: 60%; }
+
+  .push--lap--four-fifths, .push--lap--eight-tenths {
+    left: 80%; }
+
+  .push--lap--one-sixth, .push--lap--two-twelfths {
+    left: 16.666%; }
+
+  .push--lap--five-sixths, .push--lap--ten-twelfths {
+    left: 83.333%; }
+
+  .push--lap--one-eighth {
+    left: 12.5%; }
+
+  .push--lap--three-eighths {
+    left: 37.5%; }
+
+  .push--lap--five-eighths {
+    left: 62.5%; }
+
+  .push--lap--seven-eighths {
+    left: 87.5%; }
+
+  .push--lap--one-tenth {
+    left: 10%; }
+
+  .push--lap--three-tenths {
+    left: 30%; }
+
+  .push--lap--seven-tenths {
+    left: 70%; }
+
+  .push--lap--nine-tenths {
+    left: 90%; }
+
+  .push--lap--one-twelfth {
+    left: 8.333%; }
+
+  .push--lap--five-twelfths {
+    left: 41.666%; }
+
+  .push--lap--seven-twelfths {
+    left: 58.333%; }
+
+  .push--lap--eleven-twelfths {
+    left: 91.666%; } }
+@media only screen and (max-width: 1023px) {
+  .push--portable--one-whole {
+    left: 100%; }
+
+  .push--portable--one-half, .push--portable--two-quarters, .push--portable--three-sixths, .push--portable--four-eighths, .push--portable--five-tenths, .push--portable--six-twelfths {
+    left: 50%; }
+
+  .push--portable--one-third, .push--portable--two-sixths, .push--portable--four-twelfths {
+    left: 33.333%; }
+
+  .push--portable--two-thirds, .push--portable--four-sixths, .push--portable--eight-twelfths {
+    left: 66.666%; }
+
+  .push--portable--one-quarter, .push--portable--two-eighths, .push--portable--three-twelfths {
+    left: 25%; }
+
+  .push--portable--three-quarters, .push--portable--six-eighths, .push--portable--nine-twelfths {
+    left: 75%; }
+
+  .push--portable--one-fifth, .push--portable--two-tenths {
+    left: 20%; }
+
+  .push--portable--two-fifths, .push--portable--four-tenths {
+    left: 40%; }
+
+  .push--portable--three-fifths, .push--portable--six-tenths {
+    left: 60%; }
+
+  .push--portable--four-fifths, .push--portable--eight-tenths {
+    left: 80%; }
+
+  .push--portable--one-sixth, .push--portable--two-twelfths {
+    left: 16.666%; }
+
+  .push--portable--five-sixths, .push--portable--ten-twelfths {
+    left: 83.333%; }
+
+  .push--portable--one-eighth {
+    left: 12.5%; }
+
+  .push--portable--three-eighths {
+    left: 37.5%; }
+
+  .push--portable--five-eighths {
+    left: 62.5%; }
+
+  .push--portable--seven-eighths {
+    left: 87.5%; }
+
+  .push--portable--one-tenth {
+    left: 10%; }
+
+  .push--portable--three-tenths {
+    left: 30%; }
+
+  .push--portable--seven-tenths {
+    left: 70%; }
+
+  .push--portable--nine-tenths {
+    left: 90%; }
+
+  .push--portable--one-twelfth {
+    left: 8.333%; }
+
+  .push--portable--five-twelfths {
+    left: 41.666%; }
+
+  .push--portable--seven-twelfths {
+    left: 58.333%; }
+
+  .push--portable--eleven-twelfths {
+    left: 91.666%; } }
+@media only screen and (min-width: 1024px) {
+  .push--desk--one-whole {
+    left: 100%; }
+
+  .push--desk--one-half, .push--desk--two-quarters, .push--desk--three-sixths, .push--desk--four-eighths, .push--desk--five-tenths, .push--desk--six-twelfths {
+    left: 50%; }
+
+  .push--desk--one-third, .push--desk--two-sixths, .push--desk--four-twelfths {
+    left: 33.333%; }
+
+  .push--desk--two-thirds, .push--desk--four-sixths, .push--desk--eight-twelfths {
+    left: 66.666%; }
+
+  .push--desk--one-quarter, .push--desk--two-eighths, .push--desk--three-twelfths {
+    left: 25%; }
+
+  .push--desk--three-quarters, .push--desk--six-eighths, .push--desk--nine-twelfths {
+    left: 75%; }
+
+  .push--desk--one-fifth, .push--desk--two-tenths {
+    left: 20%; }
+
+  .push--desk--two-fifths, .push--desk--four-tenths {
+    left: 40%; }
+
+  .push--desk--three-fifths, .push--desk--six-tenths {
+    left: 60%; }
+
+  .push--desk--four-fifths, .push--desk--eight-tenths {
+    left: 80%; }
+
+  .push--desk--one-sixth, .push--desk--two-twelfths {
+    left: 16.666%; }
+
+  .push--desk--five-sixths, .push--desk--ten-twelfths {
+    left: 83.333%; }
+
+  .push--desk--one-eighth {
+    left: 12.5%; }
+
+  .push--desk--three-eighths {
+    left: 37.5%; }
+
+  .push--desk--five-eighths {
+    left: 62.5%; }
+
+  .push--desk--seven-eighths {
+    left: 87.5%; }
+
+  .push--desk--one-tenth {
+    left: 10%; }
+
+  .push--desk--three-tenths {
+    left: 30%; }
+
+  .push--desk--seven-tenths {
+    left: 70%; }
+
+  .push--desk--nine-tenths {
+    left: 90%; }
+
+  .push--desk--one-twelfth {
+    left: 8.333%; }
+
+  .push--desk--five-twelfths {
+    left: 41.666%; }
+
+  .push--desk--seven-twelfths {
+    left: 58.333%; }
+
+  .push--desk--eleven-twelfths {
+    left: 91.666%; } }
 /* normalize.css v2.1.2 | MIT License | git.io/normalize */
 /* normalize.scss v2.1.2 | MIT/GPLv2 License | bit.ly/normalize-with-compass */
 /* ==========================================================================
@@ -1276,9 +1664,6 @@ h1, h2, h3, h4, h5, h6 {
 
 p {
   margin: auto auto 1.5em; }
-  p + p {
-    text-indent: 1.5em;
-    margin-top: -1.5em; }
 
 abbr,
 acronym,
@@ -1493,11 +1878,11 @@ p + .drop-cap {
   .stylised-form .label {
     margin: 0.4em 1.5em 0.8em 0;
     clear: both;
-    font-family: "Bellota-Bold", "Goudy Old Style", Garamond, "Big Caslon", "Times New Roman", serif; }
+    font-family: "Ubuntu-M", "Goudy Old Style", Garamond, "Big Caslon", "Times New Roman", serif; }
   .stylised-form .submit {
     margin-top: 1.6em;
     padding: 0.8em 0.4em;
-    font-family: "Bellota-Bold", "Goudy Old Style", Garamond, "Big Caslon", "Times New Roman", serif;
+    font-family: "Ubuntu-M", "Goudy Old Style", Garamond, "Big Caslon", "Times New Roman", serif;
     font-size: 1.1em; }
 
 .icon:before {
@@ -1526,17 +1911,11 @@ body * {
   -webkit-box-sizing: border-box;
   box-sizing: border-box; }
 
-.main {
+section,
+.section {
   margin-left: auto;
   margin-right: auto;
-  padding: 0; }
-
-.lt-ie8 .g, .lt-ie8
-.grid__item {
-  padding-left: 0.8%; }
-.g.first-in-row,
-.grid__item.first-in-row {
-  padding-left: 0; }
+  padding: 1em; }
 
 .mt1 {
   margin-top: 1px; }
@@ -1644,7 +2023,7 @@ body * {
   img {
     max-width: 100% !important; } }
 /* ---------------- */
-/* 	Import fonts	*/
+/* 	Import fonts		*/
 /* ---------------- */
 @font-face {
   font-family: "icons";
@@ -1654,8 +2033,24 @@ body * {
   @font-face {
     font-family: "icons";
     src: url("../fonts/icons.woff") format("woff"), url("../fonts/icons.otf") format("opentype"), url("../fonts/icons.svg#icons") format("svg"); } }
+@font-face {
+  font-family: "Ubuntu-M";
+  src: url("../fonts/Ubuntu-M.eot");
+  src: local("?"), url("../fonts/Ubuntu-M.woff") format("woff"), url("../fonts/Ubuntu-M.otf") format("opentype"), url("../fonts/Ubuntu-M.svg#Ubuntu-M") format("svg"); }
+@media screen and (max-device-width: 480px) {
+  @font-face {
+    font-family: "Ubuntu-M";
+    src: url("../fonts/Ubuntu-M.woff") format("woff"), url("../fonts/Ubuntu-M.otf") format("opentype"), url("../fonts/Ubuntu-M.svg#Ubuntu-M") format("svg"); } }
+@font-face {
+  font-family: "Ubuntu-L";
+  src: url("../fonts/Ubuntu-L.eot");
+  src: local("?"), url("../fonts/Ubuntu-L.woff") format("woff"), url("../fonts/Ubuntu-L.otf") format("opentype"), url("../fonts/Ubuntu-L.svg#Ubuntu-L") format("svg"); }
+@media screen and (max-device-width: 480px) {
+  @font-face {
+    font-family: "Ubuntu-L";
+    src: url("../fonts/Ubuntu-L.woff") format("woff"), url("../fonts/Ubuntu-L.otf") format("opentype"), url("../fonts/Ubuntu-L.svg#Ubuntu-L") format("svg"); } }
 /* ---------------- */
-/* 	  Set styles	*/
+/* 	  Set styles		*/
 /* ---------------- */
 body {
   margin: 0;
@@ -1664,20 +2059,7 @@ body {
   color: #333333;
   font-size: 16px;
   text-align: left;
-  font-style: normal;
-  letter-spacing: 0.05em; }
-  body h1 {
-    font-size: 4em; }
-  body h2 {
-    font-size: 2.3em; }
-  body h3 {
-    font-size: 1.8em; }
-  body h4 {
-    font-size: 1.5em; }
-  body h5 {
-    font-size: 1.3em; }
-  body h6 {
-    font-size: 1em; }
+  font-style: normal; }
 
 small {
   font-size: 80%;
@@ -1690,10 +2072,9 @@ h3
 h4,
 h5,
 h6 {
-  font-family: "Bellota-Bold", "Goudy Old Style", Garamond, "Big Caslon", "Times New Roman", serif;
+  font-family: "Ubuntu-M", "Goudy Old Style", Garamond, "Big Caslon", "Times New Roman", serif;
   color: #396b9e;
-  font-style: normal;
-  line-height: 0.9em; }
+  font-style: normal; }
   h1 small,
   h2 small,
   h3
@@ -1716,5 +2097,136 @@ a {
 
 a:visited {
   color: blue; }
+
+ul {
+  padding-left: 20px; }
+
+/**
+ * .collage classes extend the .isotope default styles
+ */
+.collage__filter a {
+  margin-right: 10px;
+  color: #666;
+  text-decoration: none; }
+.collage__filter a.current {
+  font-weight: bold; }
+.collage__wrapper {
+  width: 98%;
+  position: relative;
+  left: 1%; }
+  .collage__wrapper .grid {
+    margin-left: 0; }
+  .collage__wrapper .grid__item {
+    padding: 12px; }
+    .collage__wrapper .grid__item img {
+      width: 100%;
+      height: auto; }
+  .collage__wrapper .width-1 {
+    width: 12.5%; }
+  .collage__wrapper .width-2 {
+    width: 25%; }
+  .collage__wrapper .width-3 {
+    width: 50%; }
+  .collage__wrapper .width-4 {
+    width: 75%; }
+  .collage__wrapper .width-5 {
+    width: 100%; }
+.collage--odd {
+  background-color: #e2ebf4; }
+
+#fluidbox-overlay {
+  background-color: rgba(255, 255, 255, 0.85);
+  cursor: pointer;
+  cursor: -webkit-zoom-out;
+  cursor: -moz-zoom-out;
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 500; }
+
+.fluidbox-wrap {
+  background-position: center center;
+  background-size: cover;
+  margin: 0 auto;
+  position: relative;
+  z-index: 400;
+  transition: all .25s ease-in-out; }
+
+.fluidbox-opened .fluidbox-wrap {
+  z-index: 600; }
+
+.fluidbox-ghost {
+  background-size: cover;
+  background-position: center center;
+  position: absolute;
+  transition: all .25s ease-in-out; }
+
+.isotope-item {
+  z-index: 2; }
+
+.isotope-hidden.isotope-item {
+  pointer-events: none;
+  z-index: 1; }
+
+.isotope,
+.isotope .isotope-item {
+  /* change duration value to whatever you like */
+  -webkit-transition-duration: 0.8s;
+  -moz-transition-duration: 0.8s;
+  transition-duration: 0.8s; }
+
+.isotope {
+  -webkit-transition-property: height, width;
+  -moz-transition-property: height, width;
+  transition-property: height, width; }
+
+.isotope .isotope-item {
+  -webkit-transition-property: -webkit-transform, opacity;
+  -moz-transition-property: -moz-transform, opacity;
+  transition-property: transform, opacity; }
+
+.header--main .grid__item {
+  display: table-cell;
+  vertical-align: middle; }
+.header--main .logo__wrapper {
+  text-align: center; }
+.header--main .logo {
+  width: 80%;
+  height: auto; }
+
+.nav--main {
+  display: table;
+  width: 100%;
+  width: calc(100% + 24px); }
+  .nav--main .nav__link__wrapper {
+    width: 43%; }
+  .nav--main .nav__link {
+    padding: 0 1em;
+    text-decoration: none; }
+  .nav--main .nav__link img,
+  .nav--main .nav__link span {
+    height: 84px;
+    width: auto; }
+  .nav--main .nav--transition span {
+    -moz-transition: all 0.2s ease-out;
+    -o-transition: all 0.2s ease-out;
+    -webkit-transition: all 0.2s ease-out;
+    transition: all 0.2s ease-out; }
+  .nav--main .nav--transition:hover span {
+    font-size: 1em;
+    font-family: "Ubuntu-M", "Goudy Old Style", Garamond, "Big Caslon", "Times New Roman", serif;
+    line-height: 1;
+    color: #333333; }
+  .nav--main .icon__wrapper {
+    text-align: right; }
+    .nav--main .icon__wrapper a {
+      display: block;
+      color: silver;
+      text-decoration: none; }
+      .nav--main .icon__wrapper a:before {
+        font-size: 3em; }
 
 /*# sourceMappingURL=style.css.map */

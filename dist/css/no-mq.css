@@ -1,0 +1,2232 @@
+@charset "UTF-8";
+/*------------------------------------*\
+    STYLE.CSS
+\*------------------------------------*/
+/*------------------------------------*\
+    #SETTINGS
+\*------------------------------------*/
+/**
+ * How big would you like your tabs to be?
+ */
+/**
+ * Colour settings.
+ */
+/**
+ * Reassign colour variables to better names.
+ */
+/*
+A slightly more automated approach to BEM modifier classes:
+using '&' parent selector interpolation, modifiers extend their bases,
+so that HTML markup requires only the modifier class not the base *and* modifier
+*/
+/*
+Example: the .button here in HTML
+would only require its modifier class, not both base and modifier
+e.g. class="button--good" not class="button button--good"
+
+
+.button {
+  padding: 0.5em;
+  border-radius: 0.25em;
+  @include modifier('good') {
+    background-color: green;
+  }
+  @include modifier('bad') {
+    background-color: red;
+  }
+  @include element('icon') {
+    margin-left: 1em;
+    @include modifier('good') {
+      color: green;
+    }
+    @include modifier('bad') {
+      color: red;
+    }
+  }
+}
+
+Also: due to mechanics of '@extend', other appearances of the base class
+will output all the modifiers, regardless of source-order
+--normally something that annoys me but in this case an advantage
+
+.some-context {
+  .button {
+    height: 100px;
+  }
+}
+*/
+.nav--main .nav--transition {
+  display: -moz-inline-stack;
+  display: inline-block;
+  zoom: 1;
+  *display: inline;
+  vertical-align: top; }
+
+/* ==============[ Bulletproof fontface mixin ]============== */
+/* ==============[ Basic Gradient mixin ]============== */
+.nav--main .nav--transition {
+  display: -moz-inline-stack;
+  display: inline-block;
+  zoom: 1;
+  *display: inline;
+  vertical-align: top; }
+
+/*
+  See here: http://davidwalsh.name/rem-px-browser-function-sass
+
+  ========================
+  NOTE:
+  ========================
+  lt ie9 = no rem support
+  (also no mq support)
+
+  ========================
+  FUNCTION EXPLANATIONS:
+  ========================
+  1.  This variable refers to the default browser's font-size, and 1rem = 16px.
+      For more maintainability, we store the value in a variable in order to reuse it or to change it easily.
+  2.  This function returns a number from a string, thanks Hugo for it!
+      http://hugogiraudel.com/2013/03/18/ultimate-rem-mixin/
+  3.  We called our function u because it's faster to type. u also stands for 'unit'.
+      This function takes one argument which is an array of REM or PX values.
+  4.  We define a new list, where we'll store new values.
+  5.  For each value passed in $values argument, test the current value and store it in the $list array.
+  6.  This Sass function returns the unit associated with a number. In our case, PX or REM.
+  7.  First condition: if 'pixels only' mode is active and unit value is rem,
+      convert rem value in pixels and push it into $list array.
+  8.  Second condition: else if the units are px or rem, we just push value into list.
+  9.  If the first and second conditions fail, we throw a warning in Sass console.
+  10. Lastly, we return the whole list as clean vanilla css values.
+
+  ========================
+  USAGE
+  ========================
+  _EXAMPLE.SCSS:
+  .main-header {
+        margin:u(1rem 2rem 20px 3rem);
+        padding-bottom:u(0.25rem);
+        font-size:u(0.875rem);
+  }
+
+  Outputs to:
+
+  MAIN.CSS:
+  .main-header {
+        margin: 1rem 2rem 20px 3rem;
+        padding-bottom: 0.25rem;
+        font-size: 0.875rem;
+  }
+
+  MAIN-IE.CSS:
+  .main-header {
+        margin: 16px 32px 20px 48px;
+        padding-bottom: 4px;
+        font-size: 14px;
+  }
+
+  */
+/* 1 */
+/* ==============[ Mixin forr css svg images ]============== */
+.nav--main .nav--transition span {
+  font: 0/0 a;
+  color: transparent;
+  text-shadow: none;
+  background-color: transparent;
+  border: 0; }
+
+.float--right {
+  float: right; }
+
+section:after,
+.section:after {
+  content: "";
+  display: table;
+  clear: both; }
+
+/*------------------------------------*\
+    CSSCV
+\*------------------------------------*/
+/*!*
+ *
+ * CSSCV -- csswizardry.com/csscv -- @csswizardry
+ *
+ */
+/**
+ * CSSCV is a simple, opinionated stylesheet for formatting semantic HTML to
+ * look like a CSS file. Apply the class of `.csscv` to the `html` element of
+ * your page to invoke the CSSCV stylesheet. Removing this class will leave you
+ * with an unstyled page of pure, semantic HTML. This is useful if you wish to
+ * disable CSSCV in order to style your page more suitably for recruiters and
+ * more serious applications.
+ */
+.csscv {
+  /*------------------------------------*\
+      #CONTENTS
+  \*------------------------------------*/
+  /**
+   * SETTINGS
+   * RESET
+   * HELPERS
+   * BASE
+   * RULESETS
+   * SELECTORS
+   * DECLARATIONS
+   * PROPERTIES
+   * VALUES
+   * STRINGS
+   * NUMBERS
+   * URLS
+   * LISTS
+   * BEM
+   * COMMENTS
+   * NOTICE
+   */
+  /*------------------------------------*\
+      #RESET
+  \*------------------------------------*/
+  /**
+   * This is a pretty poor reset, but it will suffice for a single-page, single-
+   * responsibility stylesheet.
+   *
+   * 1. Everything the same size (16px by default).
+   * 2. Fixes an odd font-sizing issue in some browsers.
+   */
+  /*------------------------------------*\
+      #HELPERS
+  \*------------------------------------*/
+  /**
+   * Little helper classes to allow us to quickly build stuff.
+   *
+   * 1. Space apart our rulesets by the same value as our line-height.
+   */
+  /*------------------------------------*\
+      #BASE
+  \*------------------------------------*/
+  /**
+   * 1. Comfortable line-height (equivalent to 24px).
+   * 2. Pad the page by the same value as our line-height.
+   */
+  /*------------------------------------*\
+      #RULESETS
+  \*------------------------------------*/
+  /**
+   * Wrap our selector and declarations in an element with a class of `.ruleset`.
+   */
+  /*------------------------------------*\
+      #SELECTORS
+  \*------------------------------------*/
+  /**
+   * Each section is marked up as a heading which becomes our selector. We assume
+   * all our selectors will be classes.
+   *
+   * 1. Lowercase our class names.
+   * 2. Prepend a period.
+   * 3. Append an opening brace.
+   */
+  /**
+   * Insert a hyphen in place of a space in multiple word selectors.
+   *
+   * 1. Force the empty element to take up its space.
+   */
+  /*------------------------------------*\
+      #DECLARATIONS
+  \*------------------------------------*/
+  /**
+   * Each block of declarations is marked up as a definition list with a class of
+   * `.declarations`.
+   *
+   * 1. Close our declarations with a curly brace.
+   */
+  /*------------------------------------*\
+      #PROPERTIES
+  \*------------------------------------*/
+  /**
+   * A `dt` and `dd` form a property–value pair (i.e. declaration). Each `dt` gets
+   * a class of `.property`.
+   *
+   * 1. Indent our declarations based on the chosen tab size.
+   * 2. End each property with a colon and a space.
+   */
+  /*------------------------------------*\
+      #VALUES
+  \*------------------------------------*/
+  /**
+   * Each `dd` gets a class of `.value`.
+   *
+   * 1. End each value with a semi-colon.
+   */
+  /*------------------------------------*\
+      #STRINGS
+  \*------------------------------------*/
+  /**
+   * Strings in CSS (such as font names) need to be enclosed in quotes. Wrap
+   * strings in your CV with a `span` with a class of `.string`, e.g.
+   * `<span class="string">Harry Roberts</span>`.
+   */
+  /*------------------------------------*\
+      #NUMBERS
+  \*------------------------------------*/
+  /**
+   * Numbers in values need wrapping in a `.number` element.
+   */
+  /*------------------------------------*\
+      #URLS
+  \*------------------------------------*/
+  /**
+   * Wrap any URLs with a `span` with a class of `.url`.
+   */
+  /*------------------------------------*\
+      #LISTS
+  \*------------------------------------*/
+  /**
+   * Lists of values should be marked up with a `ul` with a class of `.value-list`.
+   */
+  /*------------------------------------*\
+      #BEM
+  \*------------------------------------*/
+  /**
+   * Denote any relationships within your CV with BEM-style naming.
+   *
+   * 1. An element of an item is prepended with the namespace you set (via
+   *    `data-namespace` in your markup) and two underscores.
+   * 2. A modifier of an item is prepended with the namespace you set (via
+   *    `data-namespace` in your markup) and two hyphens.
+   */
+  /*------------------------------------*\
+      #COMMENTS
+  \*------------------------------------*/
+  /**
+   * Create inline comments.
+   */
+  /**
+   * Create multi-line, DocBlock style comments.
+   */
+  /*------------------------------------*\
+      #NOTICE
+  \*------------------------------------*/
+  /**
+   * The attribution notice that appears at the bottom of a CSSCV page.
+   *
+   * 1. Only display the message if CSSCV is enabled; the notice carries an inline
+   *    style of `display: none;` which will take effect once CSSCV is disabled.
+   */ }
+  .csscv * {
+    margin: 0;
+    padding: 0;
+    font-size: 100%;
+    /* [1] */
+    font-family: monospace, monospace;
+    /* [2] */
+    font-weight: normal; }
+  .csscv .spaced,
+  .csscv .ruleset,
+  .csscv .notice {
+    margin-bottom: 24px;
+    /* [1] */
+    margin-bottom: 1.5rem;
+    /* [1] */ }
+  .csscv .spaced--large {
+    margin-bottom: 120px;
+    margin-bottom: 7.5rem; }
+  .csscv .indented {
+    padding-left: 1.25em; }
+  .csscv {
+    line-height: 1.5;
+    /* [1] */
+    padding: 24px;
+    /* [2] */
+    padding: 1.5rem;
+    /* [2] */
+    padding-bottom: 0;
+    color: #4f6c73;
+    background-color: #002935; }
+  .csscv a {
+    color: inherit; }
+  .csscv .selector {
+    color: #0083ce;
+    text-transform: lowercase;
+    /* [1] */ }
+    .csscv .selector:before {
+      content: ".";
+      /* [2] */ }
+    .csscv .selector:after {
+      content: " {";
+      /* [3] */ }
+  .csscv .selector__delimiter {
+    position: relative;
+    white-space: pre;
+    /* [1] */ }
+    .csscv .selector__delimiter:before {
+      content: "-";
+      position: absolute;
+      display: inline-block;
+      width: .625em;
+      text-align: center; }
+  .csscv .declarations:after {
+    content: "}";
+    /* [1] */
+    color: #0083ce; }
+  .csscv .property {
+    text-transform: lowercase;
+    float: left;
+    clear: both;
+    padding-left: 1.25em;
+    /* [1] */
+    color: #b58a0a; }
+    .csscv .property:after {
+      content: ":\00A0";
+      /* [2] */
+      color: #7f9597; }
+  .csscv .value {
+    color: #b58a0a; }
+    .csscv .value:after {
+      content: ";";
+      /* [1] */
+      color: #7f9597; }
+  .csscv .string {
+    color: #00a19b; }
+    .csscv .string:before, .csscv .string:after {
+      content: "\""; }
+  .csscv .number {
+    color: #00a19b; }
+  .csscv .url:before {
+    content: "url("; }
+  .csscv .url:after {
+    content: ")"; }
+  .csscv .value-list {
+    list-style: none;
+    display: inline; }
+    .csscv .value-list > li {
+      display: inline; }
+      .csscv .value-list > li:after {
+        content: ", "; }
+      .csscv .value-list > li:last-child:after {
+        content: ""; }
+  .csscv .element:before {
+    content: attr(data-namespace) "__";
+    /* [1] */ }
+  .csscv .modifier:before {
+    content: attr(data-namespace) "--";
+    /* [2] */ }
+  .csscv .comment {
+    color: #7f9597; }
+    .csscv .comment:before {
+      content: "/* "; }
+    .csscv .comment:after {
+      content: " */"; }
+  .csscv .comment-block {
+    color: #7f9597; }
+    .csscv .comment-block:before, .csscv .comment-block:after {
+      display: block; }
+    .csscv .comment-block:before {
+      content: "/**"; }
+    .csscv .comment-block:after {
+      content: "\00A0*/"; }
+  .csscv .comment-block__line {
+    display: block; }
+    .csscv .comment-block__line:before {
+      content: "\00A0*\00A0"; }
+  .csscv .notice {
+    display: block !important;
+    /* [1] */ }
+
+.grid {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  margin-left: -24px;
+  letter-spacing: -0.31em; }
+
+.opera:-o-prefocus,
+.grid {
+  word-spacing: -0.43em; }
+
+.grid__item {
+  display: inline-block;
+  padding-left: 24px;
+  vertical-align: top;
+  width: 100%;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  letter-spacing: normal;
+  word-spacing: normal; }
+
+.grid--rev {
+  direction: rtl;
+  text-align: left; }
+  .grid--rev > .grid__item {
+    direction: ltr;
+    text-align: left; }
+
+.grid--full {
+  margin-left: 0; }
+  .grid--full > .grid__item {
+    padding-left: 0; }
+
+.grid--right {
+  text-align: right; }
+  .grid--right > .grid__item {
+    text-align: left; }
+
+.grid--center {
+  text-align: center; }
+  .grid--center > .grid__item {
+    text-align: left; }
+
+.grid--middle > .grid__item {
+  vertical-align: middle; }
+
+.grid--bottom > .grid__item {
+  vertical-align: bottom; }
+
+.grid--narrow {
+  margin-left: -12px; }
+  .grid--narrow > .grid__item {
+    padding-left: 12px; }
+
+.grid--wide {
+  margin-left: -48px; }
+  .grid--wide > .grid__item {
+    padding-left: 24px; }
+
+.one-whole {
+  width: 100%; }
+
+.one-half, .two-quarters, .three-sixths, .four-eighths, .five-tenths, .six-twelfths {
+  width: 50%; }
+
+.one-third, .two-sixths, .four-twelfths {
+  width: 33.333%; }
+
+.two-thirds, .four-sixths, .eight-twelfths {
+  width: 66.666%; }
+
+.one-quarter, .two-eighths, .three-twelfths {
+  width: 25%; }
+
+.three-quarters, .six-eighths, .nine-twelfths {
+  width: 75%; }
+
+.one-fifth, .two-tenths {
+  width: 20%; }
+
+.two-fifths, .four-tenths {
+  width: 40%; }
+
+.three-fifths, .six-tenths {
+  width: 60%; }
+
+.four-fifths, .eight-tenths {
+  width: 80%; }
+
+.one-sixth, .two-twelfths {
+  width: 16.666%; }
+
+.five-sixths, .ten-twelfths {
+  width: 83.333%; }
+
+.one-eighth {
+  width: 12.5%; }
+
+.three-eighths {
+  width: 37.5%; }
+
+.five-eighths {
+  width: 62.5%; }
+
+.seven-eighths {
+  width: 87.5%; }
+
+.one-tenth {
+  width: 10%; }
+
+.three-tenths {
+  width: 30%; }
+
+.seven-tenths {
+  width: 70%; }
+
+.nine-tenths {
+  width: 90%; }
+
+.one-twelfth {
+  width: 8.333%; }
+
+.five-twelfths {
+  width: 41.67%; }
+
+.seven-twelfths {
+  width: 58.333%; }
+
+.eleven-twelfths {
+  width: 91.666%; }
+
+@media only screen and (max-width: 480px) {
+  .palm--one-whole {
+    width: 100%; }
+
+  .palm--one-half, .palm--two-quarters, .palm--three-sixths, .palm--four-eighths, .palm--five-tenths, .palm--six-twelfths {
+    width: 50%; }
+
+  .palm--one-third, .palm--two-sixths, .palm--four-twelfths {
+    width: 33.333%; }
+
+  .palm--two-thirds, .palm--four-sixths, .palm--eight-twelfths {
+    width: 66.666%; }
+
+  .palm--one-quarter, .palm--two-eighths, .palm--three-twelfths {
+    width: 25%; }
+
+  .palm--three-quarters, .palm--six-eighths, .palm--nine-twelfths {
+    width: 75%; }
+
+  .palm--one-fifth, .palm--two-tenths {
+    width: 20%; }
+
+  .palm--two-fifths, .palm--four-tenths {
+    width: 40%; }
+
+  .palm--three-fifths, .palm--six-tenths {
+    width: 60%; }
+
+  .palm--four-fifths, .palm--eight-tenths {
+    width: 80%; }
+
+  .palm--one-sixth, .palm--two-twelfths {
+    width: 16.666%; }
+
+  .palm--five-sixths, .palm--ten-twelfths {
+    width: 83.333%; }
+
+  .palm--one-eighth {
+    width: 12.5%; }
+
+  .palm--three-eighths {
+    width: 37.5%; }
+
+  .palm--five-eighths {
+    width: 62.5%; }
+
+  .palm--seven-eighths {
+    width: 87.5%; }
+
+  .palm--one-tenth {
+    width: 10%; }
+
+  .palm--three-tenths {
+    width: 30%; }
+
+  .palm--seven-tenths {
+    width: 70%; }
+
+  .palm--nine-tenths {
+    width: 90%; }
+
+  .palm--one-twelfth {
+    width: 8.333%; }
+
+  .palm--five-twelfths {
+    width: 41.67%; }
+
+  .palm--seven-twelfths {
+    width: 58.333%; }
+
+  .palm--eleven-twelfths {
+    width: 91.666%; } }
+@media only screen and (min-width: 481px) and (max-width: 1023px) {
+  .lap--one-whole {
+    width: 100%; }
+
+  .lap--one-half, .lap--two-quarters, .lap--three-sixths, .lap--four-eighths, .lap--five-tenths, .lap--six-twelfths {
+    width: 50%; }
+
+  .lap--one-third, .lap--two-sixths, .lap--four-twelfths {
+    width: 33.333%; }
+
+  .lap--two-thirds, .lap--four-sixths, .lap--eight-twelfths {
+    width: 66.666%; }
+
+  .lap--one-quarter, .lap--two-eighths, .lap--three-twelfths {
+    width: 25%; }
+
+  .lap--three-quarters, .lap--six-eighths, .lap--nine-twelfths {
+    width: 75%; }
+
+  .lap--one-fifth, .lap--two-tenths {
+    width: 20%; }
+
+  .lap--two-fifths, .lap--four-tenths {
+    width: 40%; }
+
+  .lap--three-fifths, .lap--six-tenths {
+    width: 60%; }
+
+  .lap--four-fifths, .lap--eight-tenths {
+    width: 80%; }
+
+  .lap--one-sixth, .lap--two-twelfths {
+    width: 16.666%; }
+
+  .lap--five-sixths, .lap--ten-twelfths {
+    width: 83.333%; }
+
+  .lap--one-eighth {
+    width: 12.5%; }
+
+  .lap--three-eighths {
+    width: 37.5%; }
+
+  .lap--five-eighths {
+    width: 62.5%; }
+
+  .lap--seven-eighths {
+    width: 87.5%; }
+
+  .lap--one-tenth {
+    width: 10%; }
+
+  .lap--three-tenths {
+    width: 30%; }
+
+  .lap--seven-tenths {
+    width: 70%; }
+
+  .lap--nine-tenths {
+    width: 90%; }
+
+  .lap--one-twelfth {
+    width: 8.333%; }
+
+  .lap--five-twelfths {
+    width: 41.67%; }
+
+  .lap--seven-twelfths {
+    width: 58.333%; }
+
+  .lap--eleven-twelfths {
+    width: 91.666%; } }
+@media only screen and (max-width: 1023px) {
+  .portable--one-whole {
+    width: 100%; }
+
+  .portable--one-half, .portable--two-quarters, .portable--three-sixths, .portable--four-eighths, .portable--five-tenths, .portable--six-twelfths {
+    width: 50%; }
+
+  .portable--one-third, .portable--two-sixths, .portable--four-twelfths {
+    width: 33.333%; }
+
+  .portable--two-thirds, .portable--four-sixths, .portable--eight-twelfths {
+    width: 66.666%; }
+
+  .portable--one-quarter, .portable--two-eighths, .portable--three-twelfths {
+    width: 25%; }
+
+  .portable--three-quarters, .portable--six-eighths, .portable--nine-twelfths {
+    width: 75%; }
+
+  .portable--one-fifth, .portable--two-tenths {
+    width: 20%; }
+
+  .portable--two-fifths, .portable--four-tenths {
+    width: 40%; }
+
+  .portable--three-fifths, .portable--six-tenths {
+    width: 60%; }
+
+  .portable--four-fifths, .portable--eight-tenths {
+    width: 80%; }
+
+  .portable--one-sixth, .portable--two-twelfths {
+    width: 16.666%; }
+
+  .portable--five-sixths, .portable--ten-twelfths {
+    width: 83.333%; }
+
+  .portable--one-eighth {
+    width: 12.5%; }
+
+  .portable--three-eighths {
+    width: 37.5%; }
+
+  .portable--five-eighths {
+    width: 62.5%; }
+
+  .portable--seven-eighths {
+    width: 87.5%; }
+
+  .portable--one-tenth {
+    width: 10%; }
+
+  .portable--three-tenths {
+    width: 30%; }
+
+  .portable--seven-tenths {
+    width: 70%; }
+
+  .portable--nine-tenths {
+    width: 90%; }
+
+  .portable--one-twelfth {
+    width: 8.333%; }
+
+  .portable--five-twelfths {
+    width: 41.67%; }
+
+  .portable--seven-twelfths {
+    width: 58.333%; }
+
+  .portable--eleven-twelfths {
+    width: 91.666%; } }
+@media only screen and (min-width: 1024px) {
+  .desk--one-whole {
+    width: 100%; }
+
+  .desk--one-half, .desk--two-quarters, .desk--three-sixths, .desk--four-eighths, .desk--five-tenths, .desk--six-twelfths {
+    width: 50%; }
+
+  .desk--one-third, .desk--two-sixths, .desk--four-twelfths {
+    width: 33.333%; }
+
+  .desk--two-thirds, .desk--four-sixths, .desk--eight-twelfths {
+    width: 66.666%; }
+
+  .desk--one-quarter, .desk--two-eighths, .desk--three-twelfths {
+    width: 25%; }
+
+  .desk--three-quarters, .desk--six-eighths, .desk--nine-twelfths {
+    width: 75%; }
+
+  .desk--one-fifth, .desk--two-tenths {
+    width: 20%; }
+
+  .desk--two-fifths, .desk--four-tenths {
+    width: 40%; }
+
+  .desk--three-fifths, .desk--six-tenths {
+    width: 60%; }
+
+  .desk--four-fifths, .desk--eight-tenths {
+    width: 80%; }
+
+  .desk--one-sixth, .desk--two-twelfths {
+    width: 16.666%; }
+
+  .desk--five-sixths, .desk--ten-twelfths {
+    width: 83.333%; }
+
+  .desk--one-eighth {
+    width: 12.5%; }
+
+  .desk--three-eighths {
+    width: 37.5%; }
+
+  .desk--five-eighths {
+    width: 62.5%; }
+
+  .desk--seven-eighths {
+    width: 87.5%; }
+
+  .desk--one-tenth {
+    width: 10%; }
+
+  .desk--three-tenths {
+    width: 30%; }
+
+  .desk--seven-tenths {
+    width: 70%; }
+
+  .desk--nine-tenths {
+    width: 90%; }
+
+  .desk--one-twelfth {
+    width: 8.333%; }
+
+  .desk--five-twelfths {
+    width: 41.67%; }
+
+  .desk--seven-twelfths {
+    width: 58.333%; }
+
+  .desk--eleven-twelfths {
+    width: 91.666%; } }
+[class*="push--"] {
+  position: relative; }
+
+.push--one-whole {
+  left: 100%; }
+
+.push--one-half, .push--two-quarters, .push--three-sixths, .push--four-eighths, .push--five-tenths, .push--six-twelfths {
+  left: 50%; }
+
+.push--one-third, .push--two-sixths, .push--four-twelfths {
+  left: 33.333%; }
+
+.push--two-thirds, .push--four-sixths, .push--eight-twelfths {
+  left: 66.666%; }
+
+.push--one-quarter, .push--two-eighths, .push--three-twelfths {
+  left: 25%; }
+
+.push--three-quarters, .push--six-eighths, .push--nine-twelfths {
+  left: 75%; }
+
+.push--one-fifth, .push--two-tenths {
+  left: 20%; }
+
+.push--two-fifths, .push--four-tenths {
+  left: 40%; }
+
+.push--three-fifths, .push--six-tenths {
+  left: 60%; }
+
+.push--four-fifths, .push--eight-tenths {
+  left: 80%; }
+
+.push--one-sixth, .push--two-twelfths {
+  left: 16.666%; }
+
+.push--five-sixths, .push--ten-twelfths {
+  left: 83.333%; }
+
+.push--one-eighth {
+  left: 12.5%; }
+
+.push--three-eighths {
+  left: 37.5%; }
+
+.push--five-eighths {
+  left: 62.5%; }
+
+.push--seven-eighths {
+  left: 87.5%; }
+
+.push--one-tenth {
+  left: 10%; }
+
+.push--three-tenths {
+  left: 30%; }
+
+.push--seven-tenths {
+  left: 70%; }
+
+.push--nine-tenths {
+  left: 90%; }
+
+.push--one-twelfth {
+  left: 8.333%; }
+
+.push--five-twelfths {
+  left: 41.666%; }
+
+.push--seven-twelfths {
+  left: 58.333%; }
+
+.push--eleven-twelfths {
+  left: 91.666%; }
+
+@media only screen and (max-width: 480px) {
+  .push--palm--one-whole {
+    left: 100%; }
+
+  .push--palm--one-half, .push--palm--two-quarters, .push--palm--three-sixths, .push--palm--four-eighths, .push--palm--five-tenths, .push--palm--six-twelfths {
+    left: 50%; }
+
+  .push--palm--one-third, .push--palm--two-sixths, .push--palm--four-twelfths {
+    left: 33.333%; }
+
+  .push--palm--two-thirds, .push--palm--four-sixths, .push--palm--eight-twelfths {
+    left: 66.666%; }
+
+  .push--palm--one-quarter, .push--palm--two-eighths, .push--palm--three-twelfths {
+    left: 25%; }
+
+  .push--palm--three-quarters, .push--palm--six-eighths, .push--palm--nine-twelfths {
+    left: 75%; }
+
+  .push--palm--one-fifth, .push--palm--two-tenths {
+    left: 20%; }
+
+  .push--palm--two-fifths, .push--palm--four-tenths {
+    left: 40%; }
+
+  .push--palm--three-fifths, .push--palm--six-tenths {
+    left: 60%; }
+
+  .push--palm--four-fifths, .push--palm--eight-tenths {
+    left: 80%; }
+
+  .push--palm--one-sixth, .push--palm--two-twelfths {
+    left: 16.666%; }
+
+  .push--palm--five-sixths, .push--palm--ten-twelfths {
+    left: 83.333%; }
+
+  .push--palm--one-eighth {
+    left: 12.5%; }
+
+  .push--palm--three-eighths {
+    left: 37.5%; }
+
+  .push--palm--five-eighths {
+    left: 62.5%; }
+
+  .push--palm--seven-eighths {
+    left: 87.5%; }
+
+  .push--palm--one-tenth {
+    left: 10%; }
+
+  .push--palm--three-tenths {
+    left: 30%; }
+
+  .push--palm--seven-tenths {
+    left: 70%; }
+
+  .push--palm--nine-tenths {
+    left: 90%; }
+
+  .push--palm--one-twelfth {
+    left: 8.333%; }
+
+  .push--palm--five-twelfths {
+    left: 41.666%; }
+
+  .push--palm--seven-twelfths {
+    left: 58.333%; }
+
+  .push--palm--eleven-twelfths {
+    left: 91.666%; } }
+@media only screen and (min-width: 481px) and (max-width: 1023px) {
+  .push--lap--one-whole {
+    left: 100%; }
+
+  .push--lap--one-half, .push--lap--two-quarters, .push--lap--three-sixths, .push--lap--four-eighths, .push--lap--five-tenths, .push--lap--six-twelfths {
+    left: 50%; }
+
+  .push--lap--one-third, .push--lap--two-sixths, .push--lap--four-twelfths {
+    left: 33.333%; }
+
+  .push--lap--two-thirds, .push--lap--four-sixths, .push--lap--eight-twelfths {
+    left: 66.666%; }
+
+  .push--lap--one-quarter, .push--lap--two-eighths, .push--lap--three-twelfths {
+    left: 25%; }
+
+  .push--lap--three-quarters, .push--lap--six-eighths, .push--lap--nine-twelfths {
+    left: 75%; }
+
+  .push--lap--one-fifth, .push--lap--two-tenths {
+    left: 20%; }
+
+  .push--lap--two-fifths, .push--lap--four-tenths {
+    left: 40%; }
+
+  .push--lap--three-fifths, .push--lap--six-tenths {
+    left: 60%; }
+
+  .push--lap--four-fifths, .push--lap--eight-tenths {
+    left: 80%; }
+
+  .push--lap--one-sixth, .push--lap--two-twelfths {
+    left: 16.666%; }
+
+  .push--lap--five-sixths, .push--lap--ten-twelfths {
+    left: 83.333%; }
+
+  .push--lap--one-eighth {
+    left: 12.5%; }
+
+  .push--lap--three-eighths {
+    left: 37.5%; }
+
+  .push--lap--five-eighths {
+    left: 62.5%; }
+
+  .push--lap--seven-eighths {
+    left: 87.5%; }
+
+  .push--lap--one-tenth {
+    left: 10%; }
+
+  .push--lap--three-tenths {
+    left: 30%; }
+
+  .push--lap--seven-tenths {
+    left: 70%; }
+
+  .push--lap--nine-tenths {
+    left: 90%; }
+
+  .push--lap--one-twelfth {
+    left: 8.333%; }
+
+  .push--lap--five-twelfths {
+    left: 41.666%; }
+
+  .push--lap--seven-twelfths {
+    left: 58.333%; }
+
+  .push--lap--eleven-twelfths {
+    left: 91.666%; } }
+@media only screen and (max-width: 1023px) {
+  .push--portable--one-whole {
+    left: 100%; }
+
+  .push--portable--one-half, .push--portable--two-quarters, .push--portable--three-sixths, .push--portable--four-eighths, .push--portable--five-tenths, .push--portable--six-twelfths {
+    left: 50%; }
+
+  .push--portable--one-third, .push--portable--two-sixths, .push--portable--four-twelfths {
+    left: 33.333%; }
+
+  .push--portable--two-thirds, .push--portable--four-sixths, .push--portable--eight-twelfths {
+    left: 66.666%; }
+
+  .push--portable--one-quarter, .push--portable--two-eighths, .push--portable--three-twelfths {
+    left: 25%; }
+
+  .push--portable--three-quarters, .push--portable--six-eighths, .push--portable--nine-twelfths {
+    left: 75%; }
+
+  .push--portable--one-fifth, .push--portable--two-tenths {
+    left: 20%; }
+
+  .push--portable--two-fifths, .push--portable--four-tenths {
+    left: 40%; }
+
+  .push--portable--three-fifths, .push--portable--six-tenths {
+    left: 60%; }
+
+  .push--portable--four-fifths, .push--portable--eight-tenths {
+    left: 80%; }
+
+  .push--portable--one-sixth, .push--portable--two-twelfths {
+    left: 16.666%; }
+
+  .push--portable--five-sixths, .push--portable--ten-twelfths {
+    left: 83.333%; }
+
+  .push--portable--one-eighth {
+    left: 12.5%; }
+
+  .push--portable--three-eighths {
+    left: 37.5%; }
+
+  .push--portable--five-eighths {
+    left: 62.5%; }
+
+  .push--portable--seven-eighths {
+    left: 87.5%; }
+
+  .push--portable--one-tenth {
+    left: 10%; }
+
+  .push--portable--three-tenths {
+    left: 30%; }
+
+  .push--portable--seven-tenths {
+    left: 70%; }
+
+  .push--portable--nine-tenths {
+    left: 90%; }
+
+  .push--portable--one-twelfth {
+    left: 8.333%; }
+
+  .push--portable--five-twelfths {
+    left: 41.666%; }
+
+  .push--portable--seven-twelfths {
+    left: 58.333%; }
+
+  .push--portable--eleven-twelfths {
+    left: 91.666%; } }
+@media only screen and (min-width: 1024px) {
+  .push--desk--one-whole {
+    left: 100%; }
+
+  .push--desk--one-half, .push--desk--two-quarters, .push--desk--three-sixths, .push--desk--four-eighths, .push--desk--five-tenths, .push--desk--six-twelfths {
+    left: 50%; }
+
+  .push--desk--one-third, .push--desk--two-sixths, .push--desk--four-twelfths {
+    left: 33.333%; }
+
+  .push--desk--two-thirds, .push--desk--four-sixths, .push--desk--eight-twelfths {
+    left: 66.666%; }
+
+  .push--desk--one-quarter, .push--desk--two-eighths, .push--desk--three-twelfths {
+    left: 25%; }
+
+  .push--desk--three-quarters, .push--desk--six-eighths, .push--desk--nine-twelfths {
+    left: 75%; }
+
+  .push--desk--one-fifth, .push--desk--two-tenths {
+    left: 20%; }
+
+  .push--desk--two-fifths, .push--desk--four-tenths {
+    left: 40%; }
+
+  .push--desk--three-fifths, .push--desk--six-tenths {
+    left: 60%; }
+
+  .push--desk--four-fifths, .push--desk--eight-tenths {
+    left: 80%; }
+
+  .push--desk--one-sixth, .push--desk--two-twelfths {
+    left: 16.666%; }
+
+  .push--desk--five-sixths, .push--desk--ten-twelfths {
+    left: 83.333%; }
+
+  .push--desk--one-eighth {
+    left: 12.5%; }
+
+  .push--desk--three-eighths {
+    left: 37.5%; }
+
+  .push--desk--five-eighths {
+    left: 62.5%; }
+
+  .push--desk--seven-eighths {
+    left: 87.5%; }
+
+  .push--desk--one-tenth {
+    left: 10%; }
+
+  .push--desk--three-tenths {
+    left: 30%; }
+
+  .push--desk--seven-tenths {
+    left: 70%; }
+
+  .push--desk--nine-tenths {
+    left: 90%; }
+
+  .push--desk--one-twelfth {
+    left: 8.333%; }
+
+  .push--desk--five-twelfths {
+    left: 41.666%; }
+
+  .push--desk--seven-twelfths {
+    left: 58.333%; }
+
+  .push--desk--eleven-twelfths {
+    left: 91.666%; } }
+/* normalize.css v2.1.2 | MIT License | git.io/normalize */
+/* normalize.scss v2.1.2 | MIT/GPLv2 License | bit.ly/normalize-with-compass */
+/* ==========================================================================
+   HTML5 display definitions
+   ========================================================================== */
+/**
+ * Correct `block` display not defined in IE 8/9.
+ */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+nav,
+section,
+summary {
+  display: block; }
+
+/**
+ * Correct `inline-block` display not defined in IE 8/9.
+ */
+audio,
+canvas,
+video {
+  display: inline-block; }
+
+/**
+ * Prevent modern browsers from displaying `audio` without controls.
+ * Remove excess height in iOS 5 devices.
+ */
+audio:not([controls]) {
+  display: none;
+  height: 0; }
+
+/**
+ * Address styling not present in IE 8/9.
+ */
+[hidden] {
+  display: none; }
+
+/* ==========================================================================
+   Base
+   ========================================================================== */
+/**
+ * 1. Set default font family to sans-serif.
+ * 2. Prevent iOS text size adjust after orientation change, without disabling
+ *    user zoom.
+ * 3. Correct text resizing oddly in IE 6/7 when body `font-size` is set using
+ *    `em` units.
+ */
+html {
+  font-family: sans-serif;
+  /* 1 */
+  -ms-text-size-adjust: 100%;
+  /* 2 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */ }
+
+/**
+ * Remove default margin.
+ */
+body {
+  margin: 0; }
+
+/* ==========================================================================
+   Links
+   ========================================================================== */
+/**
+ * Address `outline` inconsistency between Chrome and other browsers.
+ */
+a:focus {
+  outline: thin dotted; }
+
+/**
+ * Improve readability when focused and also mouse hovered in all browsers.
+ */
+a:active,
+a:hover {
+  outline: 0; }
+
+/* ==========================================================================
+   Typography
+   ========================================================================== */
+/**
+ * Address variable `h1` font-size and margin within `section` and `article`
+ * contexts in Firefox 4+, Safari 5, and Chrome.
+ */
+h1 {
+  /* Set the font-size and line-height while keeping a proper vertical rhythm. */
+  font-size: 2em;
+  /* Set 1 unit of vertical rhythm on the top and bottom margins. */
+  margin-top: 0.75em;
+  margin-bottom: 0.75em; }
+
+/**
+ * Address styling not present in IE 8/9, Safari 5, and Chrome.
+ */
+abbr[title] {
+  border-bottom: 1px dotted; }
+
+/**
+ * Address style set to `bolder` in Firefox 4+, Safari 5, and Chrome.
+ */
+b,
+strong {
+  font-weight: bold; }
+
+/**
+ * Address styling not present in Safari 5 and Chrome.
+ */
+dfn {
+  font-style: italic; }
+
+/**
+ * Address differences between Firefox and other browsers.
+ */
+hr {
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box;
+  height: 0; }
+
+/**
+ * Address styling not present in IE 8/9.
+ */
+mark {
+  background: #ff0;
+  color: #000; }
+
+/**
+ * Correct font family set oddly in Safari 5 and Chrome.
+ */
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, serif;
+  font-size: 1em; }
+
+/**
+ * Improve readability of pre-formatted text in all browsers.
+ */
+pre {
+  white-space: pre-wrap; }
+
+/**
+ * Set consistent quote types.
+ */
+q {
+  quotes: "\201C" "\201D" "\2018" "\2019"; }
+
+/**
+ * Address inconsistent and variable font size in all browsers.
+ */
+small {
+  font-size: 80%; }
+
+/**
+ * Prevent `sub` and `sup` affecting `line-height` in all browsers.
+ */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline; }
+
+sup {
+  top: -0.5em; }
+
+sub {
+  bottom: -0.25em; }
+
+/* ==========================================================================
+   Lists
+   ========================================================================== */
+/* ==========================================================================
+   Embedded content
+   ========================================================================== */
+/**
+ * Remove border when inside `a` element in IE 8/9.
+ */
+img {
+  border: 0; }
+
+/**
+ * Correct overflow displayed oddly in IE 9.
+ */
+svg:not(:root) {
+  overflow: hidden; }
+
+/* ==========================================================================
+   Figures
+   ========================================================================== */
+/**
+ * Address margin not present in IE 8/9 and Safari 5.
+ */
+figure {
+  margin: 0; }
+
+/* ==========================================================================
+   Forms
+   ========================================================================== */
+/**
+ * Define consistent border, margin, and padding.
+ */
+fieldset {
+  margin: 0 2px;
+  /* Apply borders and padding that keep the vertical rhythm. */
+  border-color: #c0c0c0;
+  border-top-width: 0.06em;
+  border-top-style: solid;
+  padding-top: 0.46em;
+  border-bottom-width: 0.06em;
+  border-bottom-style: solid;
+  padding-bottom: 0.91em;
+  border-left-width: 0.06em;
+  border-left-style: solid;
+  padding-left: 0.88em;
+  border-right-width: 0.06em;
+  border-right-style: solid;
+  padding-right: 0.88em; }
+
+/**
+ * 1. Correct `color` not being inherited in IE 8/9.
+ * 2. Remove padding so people aren't caught out if they zero out fieldsets.
+ * 3. Correct alignment displayed oddly in IE 6/7.
+ */
+legend {
+  border: 0;
+  /* 1 */
+  padding: 0;
+  /* 2 */ }
+
+/**
+ * 1. Correct font family not being inherited in all browsers.
+ * 2. Correct font size not being inherited in all browsers.
+ * 3. Address margins set differently in Firefox 4+, Safari 5, and Chrome.
+ * 4. Improve appearance and consistency with IE 6/7.
+ */
+button,
+input,
+select,
+textarea {
+  font-family: inherit;
+  /* 1 */
+  font-size: 100%;
+  /* 2 */
+  margin: 0;
+  /* 3 */ }
+
+/**
+ * Address Firefox 4+ setting `line-height` on `input` using `!important` in
+ * the UA stylesheet.
+ */
+button,
+input {
+  line-height: normal; }
+
+/**
+ * Address inconsistent `text-transform` inheritance for `button` and `select`.
+ * All other form control elements do not inherit `text-transform` values.
+ * Correct `button` style inheritance in Chrome, Safari 5+, and IE 8+.
+ * Correct `select` style inheritance in Firefox 4+ and Opera.
+ */
+button,
+select {
+  text-transform: none; }
+
+/**
+ * 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio`
+ *    and `video` controls.
+ * 2. Correct inability to style clickable `input` types in iOS.
+ * 3. Improve usability and consistency of cursor style between image-type
+ *    `input` and others.
+ * 4. Remove inner spacing in IE 7 without affecting normal text inputs.
+ *    Known issue: inner spacing remains in IE 6.
+ */
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  -webkit-appearance: button;
+  /* 2 */
+  cursor: pointer;
+  /* 3 */ }
+
+/**
+ * Re-set default cursor for disabled elements.
+ */
+button[disabled],
+html input[disabled] {
+  cursor: default; }
+
+/**
+ * 1. Address box sizing set to `content-box` in IE 8/9.
+ * 2. Remove excess padding in IE 8/9.
+ * 3. Remove excess padding in IE 7.
+ *    Known issue: excess padding remains in IE 6.
+ */
+input[type="checkbox"],
+input[type="radio"] {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  /* 1 */
+  padding: 0;
+  /* 2 */ }
+
+/**
+ * 1. Address `appearance` set to `searchfield` in Safari 5 and Chrome.
+ * 2. Address `box-sizing` set to `border-box` in Safari 5 and Chrome
+ *    (include `-moz` to future-proof).
+ */
+input[type="search"] {
+  -webkit-appearance: textfield;
+  /* 1 */
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box;
+  /* 2 */ }
+
+/**
+ * Remove inner padding and search cancel button in Safari 5 and Chrome
+ * on OS X.
+ */
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none; }
+
+/**
+ * Remove inner padding and border in Firefox 4+.
+ */
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0; }
+
+/**
+ * 1. Remove default vertical scrollbar in IE 8/9.
+ * 2. Improve readability and alignment in all browsers.
+ */
+textarea {
+  overflow: auto;
+  /* 1 */
+  vertical-align: top;
+  /* 2 */ }
+
+/* ==========================================================================
+   Tables
+   ========================================================================== */
+/**
+ * Remove most spacing between table cells.
+ */
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+@font-face {
+  font-family: "Ampersand";
+  src: local("Georgia"), local("Garamond"), local("Palatino"), local("Book Antiqua");
+  unicode-range: U+0026; }
+@font-face {
+  font-family: "Ampersand";
+  src: local("Georgia");
+  unicode-range: U+270C; }
+body {
+  word-wrap: break-word; }
+
+pre code {
+  word-wrap: normal; }
+
+/**
+ * Dropcap Sass @include
+ * Use the following Sass @include with any selector you feel necessary.
+ *
+	@include dropcap($dropcap-float-position, $dropcap-font-size, $dropcap-font-family, $dropcap-txt-indent, $dropcap-margin, $dropcap-padding, $dropcap-color, $dropcap-line-height, $dropcap-bg);
+ *
+ * Extend this object into your custom stylesheet. Let the variables do the work.
+ *
+ */
+html {
+  font: normal 112.5%/1.65 serif; }
+
+body {
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  -ms-hyphens: auto;
+  -o-hyphens: auto;
+  hyphens: auto;
+  color: #444444; }
+
+small {
+  font-size: 65%; }
+
+h1, h2, h3, h4, h5, h6 {
+  text-rendering: optimizeLegibility;
+  line-height: 1;
+  margin-top: 0; }
+
+.tera {
+  font-size: 117px;
+  font-size: 6.5rem;
+  margin-bottom: 0.25rem; }
+
+.giga {
+  font-size: 90px;
+  font-size: 5rem;
+  margin-bottom: 0.33rem; }
+
+.mega {
+  font-size: 72px;
+  font-size: 4rem;
+  margin-bottom: 0.41rem; }
+
+.alpha, h1 {
+  font-size: 60px;
+  font-size: 3.33rem;
+  margin-bottom: 0.5rem; }
+
+.beta, h2 {
+  font-size: 48px;
+  font-size: 2.67rem;
+  margin-bottom: 0.62rem; }
+
+.gamma, h3 {
+  font-size: 36px;
+  font-size: 2rem;
+  margin-bottom: 0.83rem; }
+
+.delta, h4 {
+  font-size: 24px;
+  font-size: 1.33rem;
+  margin-bottom: 1.24rem; }
+
+.epsilon, h5 {
+  font-size: 21px;
+  font-size: 1.17rem;
+  margin-bottom: 1.41rem; }
+
+.zeta, h6 {
+  font-size: 18px;
+  font-size: 1rem;
+  margin-bottom: 1.65rem; }
+
+p {
+  margin: auto auto 1.5em; }
+
+abbr,
+acronym,
+blockquote,
+code,
+dir,
+kbd,
+listing,
+plaintext,
+q,
+samp,
+tt,
+var,
+xmp {
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  -ms-hyphens: none;
+  -o-hyphens: none;
+  hyphens: none; }
+
+pre code {
+  white-space: -moz-pre-wrap;
+  white-space: pre-wrap; }
+
+pre {
+  white-space: pre; }
+
+code {
+  white-space: pre;
+  font-family: monospace; }
+
+/**
+ * Abbreviations Markup
+ *
+	<abbr title="hyper text markup language">HMTL</abbr>
+ *
+ * Extend this object into your markup.
+ *
+ */
+abbr {
+  font-variant: small-caps;
+  font-weight: 600;
+  text-transform: lowercase;
+  color: gray; }
+  abbr:hover {
+    cursor: help; }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #222222; }
+
+p + .drop-cap {
+  text-indent: 0;
+  margin-top: 0; }
+
+.drop-cap:first-letter {
+  float: left;
+  margin: inherit;
+  padding: inherit;
+  font-size: 4em;
+  font-family: inherit;
+  line-height: 1;
+  text-indent: 0;
+  background: transparent;
+  color: inherit; }
+
+/**
+ * Lining Definition Style Markup
+ *
+	<dl class="lining">
+		<dt><b></b></dt>
+		<dd></dd>
+	</dl>
+ *
+ * Extend this object into your markup.
+ *
+ */
+.lining dt,
+.lining dd {
+  display: inline;
+  margin: 0; }
+.lining dt + dt:before,
+.lining dd + dt:before {
+  content: "\A";
+  white-space: pre; }
+.lining dd + dd:before {
+  content: ", "; }
+.lining dd:before {
+  content: ": ";
+  margin-left: -0.2rem; }
+
+/**
+ * Dictionary Definition Style Markup
+ *
+	<dl class="dictionary-style">
+		<dt><b></b></dt>
+			<dd></dd>
+	</dl>
+ *
+ * Extend this object into your markup.
+ *
+ */
+.dictionary-style dt {
+  display: inline;
+  counter-reset: definitions; }
+  .dictionary-style dt + dt:before {
+    content: ", ";
+    margin-left: -0.2rem; }
+.dictionary-style dd {
+  display: block;
+  counter-increment: definitions; }
+  .dictionary-style dd:before {
+    content: counter(definitions,decimal) ". "; }
+
+/**
+ * Blockquote Markup
+ *
+		<figure>
+			<blockquote cite="">
+				<p></p>
+			</blockquote>
+			<figcaption>
+				<cite>
+					<small><a href=""></a></small>
+				</cite>
+			</figcaption>
+		</figure>
+ *
+ * Extend this object into your markup.
+ *
+ */
+/**
+ * Pull Quotes Markup
+ *
+	<aside class="pull-quote">
+		<blockquote>
+			<p></p>
+		</blockquote>
+	</aside>
+ *
+ * Extend this object into your custom stylesheet.
+ *
+ */
+.pull-quote {
+  position: relative;
+  padding: 1em; }
+  .pull-quote:before, .pull-quote:after {
+    height: 1em;
+    opacity: 0.5;
+    position: absolute;
+    font-size: 4em;
+    color: #dc976e; }
+  .pull-quote:before {
+    content: '“';
+    top: 0;
+    left: 0; }
+  .pull-quote:after {
+    content: '”';
+    bottom: 0;
+    right: 0; }
+
+/**
+ * Figures Markup
+ *
+	<figure>
+		<figcaption>
+			<strong>Fig. 4.2 | </strong>Type Anatomy, an excerpt from Mark Boulton's book<cite title="http://designingfortheweb.co.uk/book/part3/part3_chapter11.php">"Designing for the Web"</cite>
+		</figcaption>
+	</figure>
+ *
+ * Extend this object into your markup.
+ *
+ */
+/**
+ * Footnote Markup : Replace 'X' with your unique number for each footnote
+ *
+	<article>
+		<p><sup><a href="#fn-itemX" id="fn-returnX"></a></sup></p>
+		<footer>
+			<ol class="foot-notes">
+				<li id="fn-itemX"><a href="#fn-returnX">↩</a></li>
+			</ol>
+		</footer>
+	</article>
+ *
+ * Extend this object into your markup.
+ *
+ */
+.stylised-form {
+  display: table;
+  padding: 2em; }
+  .stylised-form .input {
+    width: 80%;
+    margin-left: 10%; }
+  .stylised-form .input,
+  .stylised-form .textarea {
+    padding: 0.3em;
+    font-size: 0.9em;
+    font-weight: 200;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    border: 1px solid silver; }
+    .stylised-form .input:focus,
+    .stylised-form .textarea:focus {
+      outline-offset: -2px;
+      outline: #5e91c5 auto 5px; }
+  .stylised-form .label {
+    margin: 0.4em 1.5em 0.8em 0;
+    clear: both;
+    font-family: "Ubuntu-M", "Goudy Old Style", Garamond, "Big Caslon", "Times New Roman", serif; }
+  .stylised-form .submit {
+    margin-top: 1.6em;
+    padding: 0.8em 0.4em;
+    font-family: "Ubuntu-M", "Goudy Old Style", Garamond, "Big Caslon", "Times New Roman", serif;
+    font-size: 1.1em; }
+
+.icon:before {
+  speak: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-transform: none;
+  line-height: 1;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+  font-family: "icons"; }
+
+.icon-github:before {
+  content: "\f100"; }
+
+.icon-reload:before {
+  content: "\f101"; }
+
+.icon-twitter:before {
+  content: "\f102"; }
+
+body * {
+  zoom: 1;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
+
+section,
+.section {
+  margin-left: auto;
+  margin-right: auto;
+  padding: 1em; }
+
+.mt1 {
+  margin-top: 1px; }
+
+.mt2 {
+  margin-top: 2px; }
+
+.mt3 {
+  margin-top: 3px; }
+
+.mt4 {
+  margin-top: 4px; }
+
+.mt5 {
+  margin-top: 5px; }
+
+.mt6 {
+  margin-top: 6px; }
+
+.mt7 {
+  margin-top: 7px; }
+
+.mt8 {
+  margin-top: 8px; }
+
+.mt9 {
+  margin-top: 9px; }
+
+.mt10 {
+  margin-top: 10px; }
+
+.mt15 {
+  margin-top: 15px; }
+
+.mt20 {
+  margin-top: 20px; }
+
+.mt30 {
+  margin-top: 30px; }
+
+.mt40 {
+  margin-top: 40px; }
+
+.mt50 {
+  margin-top: 50px; }
+
+.mt75 {
+  margin-top: 75px; }
+
+.mt100 {
+  margin-top: 100px; }
+
+.mt150 {
+  margin-top: 150px; }
+
+.mt200 {
+  margin-top: 200px; }
+
+/* http://coding.smashingmagazine.com/2013/03/08/tips-tricks-print-style-sheets/ */
+@media print {
+  header h1 {
+    margin-right: 200px;
+    margin-bottom: 2rem;
+    line-height: 1.5; }
+
+  a {
+    font-weight: bolder;
+    text-decoration: none; }
+
+  a[href^=http]:after {
+    content: " <" attr(href) "> "; }
+
+  article a[href^="#"]:after {
+    content: ""; }
+
+  a:after > img {
+    content: ""; }
+
+  a:not(:local-link):after {
+    content: " <" attr(href) "> "; }
+
+  h1 {
+    color: #000;
+    background: none; }
+
+  nav, aside {
+    display: none; }
+
+  body, article {
+    width: 100%;
+    margin: 0;
+    padding: 0; }
+
+  @page {
+    margin: 2cm; }
+  h2, h3 {
+    page-break-after: avoid; }
+
+  ul, img {
+    page-break-inside: avoid; }
+
+  article {
+    page-break-before: always; }
+
+  img {
+    max-width: 100% !important; } }
+/* ---------------- */
+/* 	Import fonts		*/
+/* ---------------- */
+@font-face {
+  font-family: "icons";
+  src: url("../fonts/icons.eot");
+  src: local("?"), url("../fonts/icons.woff") format("woff"), url("../fonts/icons.otf") format("opentype"), url("../fonts/icons.svg#icons") format("svg"); }
+@media screen and (max-device-width: 480px) {
+  @font-face {
+    font-family: "icons";
+    src: url("../fonts/icons.woff") format("woff"), url("../fonts/icons.otf") format("opentype"), url("../fonts/icons.svg#icons") format("svg"); } }
+@font-face {
+  font-family: "Ubuntu-M";
+  src: url("../fonts/Ubuntu-M.eot");
+  src: local("?"), url("../fonts/Ubuntu-M.woff") format("woff"), url("../fonts/Ubuntu-M.otf") format("opentype"), url("../fonts/Ubuntu-M.svg#Ubuntu-M") format("svg"); }
+@media screen and (max-device-width: 480px) {
+  @font-face {
+    font-family: "Ubuntu-M";
+    src: url("../fonts/Ubuntu-M.woff") format("woff"), url("../fonts/Ubuntu-M.otf") format("opentype"), url("../fonts/Ubuntu-M.svg#Ubuntu-M") format("svg"); } }
+@font-face {
+  font-family: "Ubuntu-L";
+  src: url("../fonts/Ubuntu-L.eot");
+  src: local("?"), url("../fonts/Ubuntu-L.woff") format("woff"), url("../fonts/Ubuntu-L.otf") format("opentype"), url("../fonts/Ubuntu-L.svg#Ubuntu-L") format("svg"); }
+@media screen and (max-device-width: 480px) {
+  @font-face {
+    font-family: "Ubuntu-L";
+    src: url("../fonts/Ubuntu-L.woff") format("woff"), url("../fonts/Ubuntu-L.otf") format("opentype"), url("../fonts/Ubuntu-L.svg#Ubuntu-L") format("svg"); } }
+/* ---------------- */
+/* 	  Set styles		*/
+/* ---------------- */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Ubuntu-L", "Helvetica Neue", "Helvetica", arial, sans-serif;
+  color: #333333;
+  font-size: 16px;
+  text-align: left;
+  font-style: normal; }
+
+small {
+  font-size: 80%;
+  line-height: 1.2;
+  display: block; }
+
+h1,
+h2,
+h3
+h4,
+h5,
+h6 {
+  font-family: "Ubuntu-M", "Goudy Old Style", Garamond, "Big Caslon", "Times New Roman", serif;
+  color: #396b9e;
+  font-style: normal; }
+  h1 small,
+  h2 small,
+  h3
+  h4 small,
+  h5 small,
+  h6 small {
+    font-size: 80%;
+    color: gray;
+    line-height: 0; }
+
+h3, h4, h5, h6 {
+  color: #4d4d4d;
+  margin-bottom: 1.2em; }
+
+h1 + h2, h2 + h3, h3 + h4 h4 + h5, h5 + h6 {
+  margin-top: 0; }
+
+a {
+  color: blue; }
+
+a:visited {
+  color: blue; }
+
+ul {
+  padding-left: 20px; }
+
+/**
+ * .collage classes extend the .isotope default styles
+ */
+.collage__filter a {
+  margin-right: 10px;
+  color: #666;
+  text-decoration: none; }
+.collage__filter a.current {
+  font-weight: bold; }
+.collage__wrapper {
+  width: 98%;
+  position: relative;
+  left: 1%; }
+  .collage__wrapper .grid {
+    margin-left: 0; }
+  .collage__wrapper .grid__item {
+    padding: 12px; }
+    .collage__wrapper .grid__item img {
+      width: 100%;
+      height: auto; }
+  .collage__wrapper .width-1 {
+    width: 12.5%; }
+  .collage__wrapper .width-2 {
+    width: 25%; }
+  .collage__wrapper .width-3 {
+    width: 50%; }
+  .collage__wrapper .width-4 {
+    width: 75%; }
+  .collage__wrapper .width-5 {
+    width: 100%; }
+.collage--odd {
+  background-color: #e2ebf4; }
+
+#fluidbox-overlay {
+  background-color: rgba(255, 255, 255, 0.85);
+  cursor: pointer;
+  cursor: -webkit-zoom-out;
+  cursor: -moz-zoom-out;
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 500; }
+
+.fluidbox-wrap {
+  background-position: center center;
+  background-size: cover;
+  margin: 0 auto;
+  position: relative;
+  z-index: 400;
+  transition: all .25s ease-in-out; }
+
+.fluidbox-opened .fluidbox-wrap {
+  z-index: 600; }
+
+.fluidbox-ghost {
+  background-size: cover;
+  background-position: center center;
+  position: absolute;
+  transition: all .25s ease-in-out; }
+
+.isotope-item {
+  z-index: 2; }
+
+.isotope-hidden.isotope-item {
+  pointer-events: none;
+  z-index: 1; }
+
+.isotope,
+.isotope .isotope-item {
+  /* change duration value to whatever you like */
+  -webkit-transition-duration: 0.8s;
+  -moz-transition-duration: 0.8s;
+  transition-duration: 0.8s; }
+
+.isotope {
+  -webkit-transition-property: height, width;
+  -moz-transition-property: height, width;
+  transition-property: height, width; }
+
+.isotope .isotope-item {
+  -webkit-transition-property: -webkit-transform, opacity;
+  -moz-transition-property: -moz-transform, opacity;
+  transition-property: transform, opacity; }
+
+.header--main .grid__item {
+  display: table-cell;
+  vertical-align: middle; }
+.header--main .logo__wrapper {
+  text-align: center; }
+.header--main .logo {
+  width: 80%;
+  height: auto; }
+
+.nav--main {
+  display: table;
+  width: 100%;
+  width: calc(100% + 24px); }
+  .nav--main .nav__link__wrapper {
+    width: 43%; }
+  .nav--main .nav__link {
+    padding: 0 1em;
+    text-decoration: none; }
+  .nav--main .nav__link img,
+  .nav--main .nav__link span {
+    height: 84px;
+    width: auto; }
+  .nav--main .nav--transition span {
+    -moz-transition: all 0.2s ease-out;
+    -o-transition: all 0.2s ease-out;
+    -webkit-transition: all 0.2s ease-out;
+    transition: all 0.2s ease-out; }
+  .nav--main .nav--transition:hover span {
+    font-size: 1em;
+    font-family: "Ubuntu-M", "Goudy Old Style", Garamond, "Big Caslon", "Times New Roman", serif;
+    line-height: 1;
+    color: #333333; }
+  .nav--main .icon__wrapper {
+    text-align: right; }
+    .nav--main .icon__wrapper a {
+      display: block;
+      color: silver;
+      text-decoration: none; }
+      .nav--main .icon__wrapper a:before {
+        font-size: 3em; }
+
+/*# sourceMappingURL=no-mq.css.map */
