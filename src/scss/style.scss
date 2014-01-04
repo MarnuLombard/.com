@@ -16,9 +16,6 @@
 @import "vars/csscv-vars";
 @import "vars/typeplate-vars";
 
-
-@import "extends";
-
 // Mixins
 @import "mixins/bem";
 @import "mixins/clearfix";
@@ -34,6 +31,8 @@
 @import "mixins/svg-fallback";
 @import "mixins/vertical-center";
 
+@import "extends";
+
 // Libraries
 @import "libs/breakpoint";
 @import "libs/csscv";
@@ -43,7 +42,7 @@
 @import "libs/sassy-buttons";
 @import "libs/typeplate";
 
-// Gereric Styles
+// Generic Styles
 @import "styles/color";
 @import "styles/forms";
 @import "styles/icons";
@@ -53,6 +52,9 @@
 @import "styles/typography";
 
 // Objects Partials
+@import "objects/collage";
+@import "objects/fluidbox";
 @import "objects/footer";
+@import "objects/isotope";
 @import "objects/navbar";
 @import "objects/partials";

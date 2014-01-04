@@ -1,25 +1,47 @@
 $(document).ready(function() {
 
 	// Replace png with svg using modernizr
-	/*if (!Modernizr.inlinesvg) {
+	if (!Modernizr.inlinesvg) {
 		$('img[src*="svg"]').attr('src', function() {
 			return $(this).attr('src').replace('.svg', '.png');
 		});
-	}*/
+	}
 	//--> Modernizr
 
-	// a link to replace a link with
-	// a phone number using js.
-	// for extra security
-	$('#showNumber').click(function() {
-		$(this).html('076 561 8470');
-		$(this).css('cursor', 'text');
-		$(this).css('text-decoration', 'none');
-	});
 
-	// a class / hook to close the modal when the open call comes from within a first modal
+	// The function to make the collage function work as per isotope
+    var $container = $('.collage__wrapper');
+    $container.isotope({
+        filter: '*',
+        animationOptions: {
+            duration: 750,
+            easing: 'linear',
+            queue: false
+        }
+    });
 
-	$('.closeAll').bind('click', function () {
-		$(this).parent().hide('fast');
-	});
+    $('.collage__filter a').click(function(){
+        $('.collage__filter .current').removeClass('current');
+        $(this).addClass('current');
+
+        var selector = $(this).attr('data-filter');
+
+        $container.isotope({
+            filter: selector,
+            animationOptions: {
+                duration: 750,
+                easing: 'linear',
+                queue: false
+            }
+         });
+         return false;
+    });
+    //--> isotope
+
+    // init fluidbox
+        $(function () {
+            // You can use any kind of selectors
+            $('.collage__img').fluidbox();
+        });
+    //--> fluidbox
 });//doc ready

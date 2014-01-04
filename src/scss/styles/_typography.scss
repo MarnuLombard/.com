@@ -1,12 +1,14 @@
-	/* ---------------- */
-/* 	Import fonts	*/
+/* ---------------- */
+/* 	Import fonts		*/
 /* ---------------- */
 
 @include font-face($font-icons);
+@include font-face(Ubuntu-M);
+@include font-face(Ubuntu-L);
 
 
 /* ---------------- */
-/* 	  Set styles	*/
+/* 	  Set styles		*/
 /* ---------------- */
 
 body {
@@ -17,27 +19,6 @@ body {
 	font-size: $base-font-size;
 	text-align: left;
 	font-style: normal;
-	letter-spacing: 0.05em;
-
-	h1 {
-		font-size: 4em;
-	}
-	h2 {
-		font-size: 2.3em;
-	}
-	h3 {
-		font-size: 1.8em;
-	}
-	h4 {
-		font-size: 1.5em;
-	}
-	h5 {
-		font-size: 1.3em;
-	}
-	h6 {
-		font-size: 1em;
-	}
-
 }// body
 
 
@@ -57,7 +38,6 @@ h6 {
 	font-family: $font-headings;
 	color: $color-headings;
 	font-style: normal;
-	line-height: 0.9em;
 
 	small {
 	  font-size: 80%;
@@ -88,3 +68,7 @@ a:visited {
 	color: blue;
 }
 
+
+ul {
+	padding-left: 20px;
+}

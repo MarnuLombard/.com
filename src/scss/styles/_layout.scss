@@ -5,23 +5,12 @@ body * {
 
 // to wrap all grid objects
 //to give all rows a bit of spacing
-.main {
+section,
+.section {
 	@extend %clearfix;
 	margin-left: auto;
 	margin-right: auto;
-	padding: 0;
-}
-
-.g,
-.grid__item {
-
-	.lt-ie8 & {
-		padding-left: 0.8%;
-	}
-
-	&.first-in-row {
-		padding-left: 0;
-	}
+	padding: 1em;
 }
 
 //these are little margin-top magic number hacks
