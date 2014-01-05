@@ -1,6 +1,6 @@
 @import "inline-block__hack";
 
-%even-distribution--wrapper{
+@mixin even-distribution--wrapper {
     text-align: justify;
 
 	&:after{
@@ -13,9 +13,4 @@
 
 @mixin even-distribution--item{
     @extend %inline-block__hack;
-}
-
-
-@mixin even-distribution--wrapper{
-   @extend %even-distribution--wrapper
 }

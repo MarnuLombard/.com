@@ -109,12 +109,15 @@ module.exports = function(grunt) {
       dev : {
         files: {
           '../dist/js/script.min.js': [
-            'js/vendor/*',
             'js/plugins/*'
           ],
           '../dist/js/app.min.js': [
             'js/app.js'
-          ]
+          ],
+          '../dist/js/modernizr.min.js': [
+            'js/vendor/modernizr.js'
+          ],
+
         }
       },
       dist: {

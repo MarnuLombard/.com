@@ -13,9 +13,20 @@
   border: 0;
 }
 
+%inline-block__hack {
+  @include inline-block__hack;
+}
 
 %vertical-center {
   @include vertical-center;
+}
+
+%even-distribution--wrapper {
+  @include even-distribution--wrapper;
+}
+
+%even-distribution--item {
+  @extend %inline-block__hack;
 }
 
 .float--right {

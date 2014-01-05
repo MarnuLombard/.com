@@ -4,38 +4,31 @@
 	include_once 'static/head.php';
 ?>
 
-<body class="basic">
-<?php include_once 'static/noscript.php'; ?>
-
-	<?php include_once 'static/header.php'; ?>
-
-<body class="basic">
+<body>
 <?php include_once 'static/noscript.php'; ?>
 
   <?php include_once 'static/header.php'; ?>
 
 
   <div class="collage__filter">
-    <a href="#" data-filter="*" class="current">All Categories</a>
-    <a href="#" data-filter=".web_development">Web development</a>
-    <a href="#" data-filter=".print_design">Print design</a>
-    <a href="#" data-filter=".under_development">Under develoment</a>
-    <a href="#" data-filter=".open_source">Open source</a>
-    <a href="#" data-filter=".code_snippets">Code snippets</a>
-    <a href="#" data-filter=".blog_ramblings">Blog ramblings</a>
+  <h4>Filter items</h4>
+    <a href="#" data-filter="all" class="current">All Categories</a>
+    <a href="#" data-filter="web_development">Web development</a>
+    <a href="#" data-filter="print_design">Print design</a>
+    <a href="#" data-filter="under_development">Under develoment</a>
+    <a href="#" data-filter="open_source">Open source</a>
+    <a href="#" data-filter="code_snippets">Code snippets</a>
+    <a href="#" data-filter="blog_ramblings">Blog ramblings</a>
   </div><!-- // collage__filter -->
 
-<section class="columns grid">
+<section class="columns collage__wrapper grid">
 <?php
-
-  use \MKD\Markdown;
 
   $posts_files =  glob('posts/*.php');
 
-for ($i=0; $i < count($posts_files); $i++) {
-  $css_class = 'wrapper ';  // Elements can have multiple css classes
-  $css_class .= $i % 2 == 0 ? 'row_odd' : 'row_even';
-}
+  // randomise order of keys in array
+  shuffle($posts_files);
+
   foreach ($posts_files as $key=>$value) {
     include_once $value;
 
@@ -43,17 +36,18 @@ for ($i=0; $i < count($posts_files); $i++) {
     $image    = 'img/portfolio/full/'.$name.'.jpg';
     $thumb    = 'img/portfolio/thumbs/'.$name.'.jpg';
     $tags     = str_replace('_', ' ', $postData['tags']);
-    $tagclass = strtolower($postData['tags']);
-    $width    = 'width-'.$postData['width'];
+    $tagClass = strtolower($postData['tags']);
     $markdown = Markdown($postData['markdown']);
 
     $html = <<<HTML
-      <div class="grid__item {$width} {$tagClass}">
+      <div class="grid__item column__item dontsplit {$tagClass}">
         <a href="{$image}" class="collage__img" data-fluidbox>
           <img src="{$thumb}" alt="{$name}">
-        </a> <br>
-        $markdown<br>
-        <p><small>Tags: <em>$tags</em></small></p>
+        </a>
+        <div class="markdown">
+          $markdown
+          <p><small>Tags: <em>$tags</em></small></p>
+        </div>
       </div>
 HTML;
 

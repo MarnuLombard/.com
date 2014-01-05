@@ -1,28 +1,40 @@
-.columns{
- @include column-count(3);
- @include column-gap(30px);
+.columns {
+  .csscolumns &:not(.filtered) {
+    @include column-count(3);
+    @include column-gap(30px);
 
- img {
-  width: 100%;
-  height: auto;
- }
+    img {
+      width: 100%;
+      height: auto;
+    }
 
- @include breakpoint(50em) {
-   @include column-count(2);
-   @include column-gap(10px);
- }
-}
+    @include breakpoint(50em) {
+      @include column-count(2);
+      @include column-gap(10px);
+    }
 
-/**
- * .collage classes extend the .isotope default styles
- */
+    @include breakpoint(min-width 100em) {
+      @include column-count(4);
+      @include column-gap(40px);
+    }
+  } //csscolumns &
+}// columns
+
+
 .collage {
 @include element(filter) {
+  @extend %even-distribution--wrapper;
+  padding: 1em 2em 0;
+
+  h4 {
+    margin-bottom: 0.2em;
+  }
 
   a {
+    @extend %even-distribution--item;
     margin-right: 10px;
-    color:#666;
-    text-decoration:none;
+    color: $color-text;
+    text-decoration: none;
   }
 
   a.current {
@@ -34,42 +46,34 @@
 
 @include element(wrapper) {
     width: 98%;
+    margin-left: 0;
     position: relative;
     left: 1%;
 
-  .grid {
-    margin-left: 0;
-  }
+  .column__item {
+   margin-bottom: 2em;
+   padding: 0;
+   border: 1px solid $color-grey_light;
 
-  .grid__item {
-   padding: 12px;
+   .no-csscolumns & {
+    padding: 1em 1em 0 1em;
+   }
 
     img {
       width: 100%;
       height: auto;
     }
-  }
 
-  .width-1 {
-    width: 12.5%;
-  }
-  .width-2 {
-    width: 25%;
-  }
-  .width-3 {
-    width: 50%;
-  }
-  .width-4 {
-    width: 75%;
-  }
-  .width-5 {
-    width: 100%;
+    .csscolumns & .markdown {
+      padding: 1em 1em 0 1em;
+    }
   }
 }// wrapper
 
-@include modifier(odd) {
-  background-color: lighten($color-primary_Xlight, 20%);
-}
-
-
 }// collage
+
+// for the MixItUp js plugin
+.mix_all {
+  opacity: 0;
+  display: none;
+}

@@ -29,6 +29,8 @@
 		<link rel="stylesheet" href="css/style.css" rel="stylesheet" />
 	<!--<![endif]-->
 
+	<!-- Load modernizr in <head> so as to get the tests run asap -->
+	<script src="js/modernizr.min.js"></script>
 
 	<!-- Favicons -->
 	<link rel="shortcut icon" href="img/favicons/favicon.png">
