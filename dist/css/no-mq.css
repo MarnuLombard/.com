@@ -1911,6 +1911,9 @@ body * {
   -webkit-box-sizing: border-box;
   box-sizing: border-box; }
 
+body {
+  padding: 0 2em; }
+
 section,
 .section {
   margin-left: auto;
@@ -2101,6 +2104,17 @@ a:visited {
 ul {
   padding-left: 20px; }
 
+.columns {
+  -moz-column-count: 3;
+  -webkit-column-count: 3;
+  column-count: 3;
+  -moz-column-gap: 30px;
+  -webkit-column-gap: 30px;
+  column-gap: 30px; }
+  .columns img {
+    width: 100%;
+    height: auto; }
+
 /**
  * .collage classes extend the .isotope default styles
  */
@@ -2188,45 +2202,43 @@ ul {
   -moz-transition-property: -moz-transform, opacity;
   transition-property: transform, opacity; }
 
-.header--main .grid__item {
-  display: table-cell;
-  vertical-align: middle; }
-.header--main .logo__wrapper {
-  text-align: center; }
-.header--main .logo {
-  width: 80%;
-  height: auto; }
+.header--main {
+  padding: 0 2em; }
+  .header--main .grid__item {
+    display: table-cell;
+    vertical-align: middle; }
+  .header--main .logo__wrapper {
+    text-align: center;
+    padding-left: 1em; }
+  .header--main .logo {
+    height: auto; }
 
 .nav--main {
   display: table;
-  width: 100%;
-  width: calc(100% + 24px); }
-  .nav--main .nav__link__wrapper {
-    width: 43%; }
+  width: 100%; }
   .nav--main .nav__link {
     padding: 0 1em;
     text-decoration: none; }
-  .nav--main .nav__link img,
-  .nav--main .nav__link span {
+  .nav--main .nav__link img {
     height: 84px;
+    height: 8vw;
+    min-height: 65px;
+    max-height: 140px;
     width: auto; }
   .nav--main .nav--transition span {
     -moz-transition: all 0.2s ease-out;
     -o-transition: all 0.2s ease-out;
     -webkit-transition: all 0.2s ease-out;
     transition: all 0.2s ease-out; }
-  .nav--main .nav--transition:hover span {
+  .touch .nav--main .nav--transition span, .nav--main .nav--transition:hover span {
     font-size: 1em;
     font-family: "Ubuntu-M", "Goudy Old Style", Garamond, "Big Caslon", "Times New Roman", serif;
     line-height: 1;
     color: #333333; }
-  .nav--main .icon__wrapper {
-    text-align: right; }
-    .nav--main .icon__wrapper a {
-      display: block;
-      color: silver;
-      text-decoration: none; }
-      .nav--main .icon__wrapper a:before {
-        font-size: 3em; }
+  .nav--main .icon__wrapper a {
+    color: silver;
+    text-decoration: none; }
+    .nav--main .icon__wrapper a:before {
+      font-size: 3em; }
 
 /*# sourceMappingURL=no-mq.css.map */

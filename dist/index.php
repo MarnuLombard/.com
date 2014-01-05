@@ -25,7 +25,7 @@
     <a href="#" data-filter=".blog_ramblings">Blog ramblings</a>
   </div><!-- // collage__filter -->
 
-<section class="collage__wrapper grid">
+<section class="columns grid">
 <?php
 
   use \MKD\Markdown;

@@ -3,6 +3,10 @@ body * {
 	@include box-sizing(border-box);
 }
 
+body {
+  padding: 0 2em;
+}
+
 // to wrap all grid objects
 //to give all rows a bit of spacing
 section,
@@ -12,6 +16,9 @@ section,
 	margin-right: auto;
 	padding: 1em;
 }
+
+ // @include breakpoint(50em) {
+
 
 //these are little margin-top magic number hacks
 .mt1	{margin-top: 1px;}

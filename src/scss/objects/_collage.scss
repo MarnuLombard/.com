@@ -1,3 +1,18 @@
+.columns{
+ @include column-count(3);
+ @include column-gap(30px);
+
+ img {
+  width: 100%;
+  height: auto;
+ }
+
+ @include breakpoint(50em) {
+   @include column-count(2);
+   @include column-gap(10px);
+ }
+}
+
 /**
  * .collage classes extend the .isotope default styles
  */

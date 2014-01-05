@@ -1,38 +1,107 @@
 .header--main {
+	padding: 0 2em;
+
+	  @include breakpoint(50em) {
+			padding: 0;
+	  }
+
  .grid__item {
     display: table-cell;
     vertical-align: middle;
+
+    @include breakpoint(50em) {
+    	padding-left: 0;
+    }
+
+    @include breakpoint(31em) {
+    	display: block;
+    	text-align: center;
+    	width: 100%;
+    }
   }
 
 	.logo__wrapper {
 	  text-align: center;
+	  padding-left: 1em;
+
+	  @include breakpoint(min-width 50em) {
+	  	padding: 1em;
+	  }
+
+	  @include breakpoint(31em) {
+			padding-top: 1em;
+		}
 	}
 
 	.logo {
-	  width: 80%;
 	  height: auto;
+
+		@include breakpoint(min-width 50em) {
+		  width: 100%;
+		  max-width: 160px;
+		  min-width: 100px;
+		}
+
 	}
 }
 
 .nav--main {
   display: table;
   width: 100%;
-  width: calc(100% + 24px);
+
+  @include breakpoint(min-width 50em) {
+	  width: calc(100% + 24px);
+	}
+
+	@include breakpoint(50em) {
+		margin-left: 0;
+	}
+
 
 	.nav__link__wrapper {
-	  width: 43%;
+	  @include breakpoint(min-width 50em) {
+	  	width: 43%;
+	  }
 	}
 
 	.nav__link {
 		padding: 0 1em;
 		text-decoration: none;
+
+	  @include breakpoint(50em) {
+			text-align: center;
+			padding: 0;
+	  }
+
+	}
+
+	.nav__link img {
+		height: 84px;
+	  height: 8vw;
+	  min-height: 65px;
+	  max-height: 140px;
+	  width: auto;
 	}
 
 	.nav__link img,
 	.nav__link span {
-	  height: 84px;
-	  width: auto;
+	  @include breakpoint(50em) {
+			display: block;
+			margin: 0 auto;
+	  }
+
 	}
+
+	.nav__link span {
+	  @include breakpoint(50em min-width 31em) {
+			width: 150px;
+			height: 30px;
+			font-size: 15px;
+	  }
+	  @include breakpoint(31em) {
+	  	width: 80px;
+	  }
+  }
 
 	.nav--transition {
 		@extend %inline-block__hack;
@@ -41,25 +110,58 @@
 			@include transition(all 0.2s ease-out);
 		}
 
+		.touch & span,
 		&:hover span{
 			font-size: 1em;
 			font-family: $font-headings;
 			line-height: 1;
 			color: $color-text;
+
+		  @include breakpoint(50em) {
+				padding-top: 0.5em
+		  }
 		}
 	} // nav--transition
 
 	.icon__wrapper {
-		text-align: right;
+
 		a {
-			display: block;
 			color: $color-grey_light;
 			text-decoration: none;
 
 			&:before {
 				font-size: 3em;
 			}
+		} // a
+
+		@include breakpoint(min-width 31em) {
+			text-align: right;
+			a {
+				display: block;
+			}
 		}
+
+		@include breakpoint(31em) {
+			padding: 2em;
+		}
+
+		@include breakpoint(50em min-width 31em) {
+			padding-right: 2em;
+
+			a {
+				position: relative;
+				margin-bottom: 1em;
+				&:before {
+					font-size: 2em;
+				}
+			}
+
+			span {
+				position: absolute;
+				left: -3.5em;
+				top: 0.5em;
+			}
+		}// breakpoint
 	}
 
 } //.nav--main

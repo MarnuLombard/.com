@@ -4,6 +4,9 @@ module.exports = function(grunt) {
   // load all grunt tasks matching the `grunt-*` pattern
   require('load-grunt-tasks')(grunt);
 
+  // Load Time-grunt individually because it doesn't match the grunt-* pattern
+  require('time-grunt')(grunt);
+
   grunt.initConfig({
 
     // watch for changes and trigger sass, concat, uglify and livereload
@@ -92,7 +95,6 @@ module.exports = function(grunt) {
           style: 'compressed',
           precision: '2',
           compass: true,
-          require: 'sass-globbing',
           cache: 'delete/'
         },
         files: {
