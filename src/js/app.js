@@ -28,7 +28,15 @@ $(document).ready(function() {
 
   // init fluidbox
   $(function () {
-    $('.collage__img').fluidbox();
+    // Call plugin
+    $('.collage__img').fluidbox({
+      templates: {
+        buttons: {
+          next: '<div class="fluidbox-btn" id="fluidbox-btn-next"></div>',
+          prev: '<div class="fluidbox-btn" id="fluidbox-btn-prev"></div>'
+        }
+      }
+    });
   });
   //--> fluidbox
 

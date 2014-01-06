@@ -1,8 +1,8 @@
 // ---------------------------------------------------------- //
-/* ==============[ Mixin forr css svg images ]============== */
+/* ========[ Mixin for cross browser svg backgrounds]======== */
 
 //	Created by Marnu Lombard
-//	V1.0
+//	V1.1
 //	MarnuLombard.github.com
 //
 //	Original technique written by Pau Giner.
@@ -13,9 +13,12 @@
 
 // ---------------------------------------------------------- //
 
-@mixin svg-fallback($image) {
+
+$img-directory : "../img/" !default;
+
+@mixin svg-fallback($image, $img-directory) {
 	$support-for-original-webkit-gradients : false; // so as to serve fallback to android 2.*
-	
-	background: image-url("#{$image}.png") center center no-repeat; 
-	@include background-image(linear-gradient(left, transparent, transparent), image-url("#{$image}.svg"));
+
+	background-image: url("#{$img-directory}#{$image}.png");
+	@include background-image(linear-gradient(left, transparent, transparent), url("#{$img-directory}#{$image}.svg"));
 }

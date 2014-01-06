@@ -41,7 +41,7 @@
 
     $html = <<<HTML
       <div class="grid__item column__item dontsplit {$tagClass}">
-        <a href="{$image}" class="collage__img" data-fluidbox>
+        <a href="{$image}" class="collage__img" rel="foo" title="{$name}" data-fluidbox>
           <img src="{$thumb}" alt="{$name}">
         </a>
         <div class="markdown">
