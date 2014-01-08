@@ -7,3 +7,4 @@ node_modules
 *.sublime-workspace
 sql.config.php
 .sass-cache
+test

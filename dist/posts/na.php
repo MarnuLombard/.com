@@ -3,7 +3,6 @@
 $postData = array(
 
 'tags' => 'Web_Development 2013',
-'width' => '2',
 'markdown' => "
 ####Narcotics Anonymous
 A very large scale site for an NGO. The previous site has ~80 pages. (And was written in a table-based layout)

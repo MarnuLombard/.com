@@ -3,7 +3,6 @@
 $postData = array(
 
 'tags' => 'Web_Development 2013 Under_Development',
-'width' => '2',
 'markdown' => "
 ####Kainav Conservation Foundation
 In the early parts of the build, but have a look at the [github repo here.](https://github.com/MarnuLombard/kainav)

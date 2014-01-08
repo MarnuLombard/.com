@@ -21,46 +21,12 @@
     <a href="#" data-filter="blog_ramblings">Blog ramblings</a>
   </div><!-- // collage__filter -->
 
-<section class="columns collage__wrapper grid">
-<?php
-
-  $posts_files =  glob('posts/*.php');
-
-  // randomise order of keys in array
-  shuffle($posts_files);
-
-  foreach ($posts_files as $key=>$value) {
-    include_once $value;
-
-    $name     = str_replace(array('posts/','.php'), '', $value);
-    $image    = 'img/portfolio/full/'.$name.'.jpg';
-    $thumb    = 'img/portfolio/thumbs/'.$name.'.jpg';
-    $tags     = str_replace('_', ' ', $postData['tags']);
-    $tagClass = strtolower($postData['tags']);
-    $markdown = Markdown($postData['markdown']);
-
-    $html = <<<HTML
-      <div class="grid__item column__item dontsplit {$tagClass}">
-        <a href="{$image}" class="collage__img" rel="foo" title="{$name}" data-fluidbox>
-          <img src="{$thumb}" alt="{$name}">
-        </a>
-        <div class="markdown">
-          $markdown
-          <p><small>Tags: <em>$tags</em></small></p>
-        </div>
-      </div>
-HTML;
-
-    echo $html;
-
-  } // foreach ($posts_files as $value)
-
-?>
+<section class="columns collage__wrapper grid" id="ajaxInto">
 </section><!-- // collage__wrapper -->
 
-  <button class="button__reload icon-reload">
+  <div data-nowLoaded="0" class="button__reload icon-reload" id="ajaxLoad">
     Load more
-  </button>
+  </div>
 
 	<?php include_once 'static/footer.php'; ?>
 

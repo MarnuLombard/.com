@@ -1,7 +1,7 @@
 .columns {
   .csscolumns & {
     @include column-count(3);
-    @include column-gap(30px);
+    @include column-gap(50px);
 
     img {
       width: 100%;
@@ -10,12 +10,12 @@
 
     @include breakpoint(50em) {
       @include column-count(2);
-      @include column-gap(10px);
+      @include column-gap(20px);
     }
 
     @include breakpoint(min-width 100em) {
       @include column-count(4);
-      @include column-gap(40px);
+      @include column-gap(80px);
     }
   } //csscolumns &
 }// columns

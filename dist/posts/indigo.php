@@ -1,8 +1,8 @@
 <?php
 
 $postData = array(
+
 'tags' => 'Web_Development 2013',
-'width' => '1',
 'markdown' => "
 ####Indigo Marketing
 This is the redesign of my current employer's site.

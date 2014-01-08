@@ -3,7 +3,6 @@
 $postData = array(
 
 'tags' => 'Web_Development 2013',
-'width' => '2',
 'markdown' => "
 ####SBV (Secure Banking Vehicle)
 A corporate site for a large cash in transit company.

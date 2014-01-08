@@ -1,10 +1,6 @@
 <?php
 	ob_start();
-
-
-  foreach (glob($_SERVER['DOCUMENT_ROOT'].'/includes/classes/*.interface.php') as $interface_filename){
-    require_once($interface_filename);
-  }
+  session_start();
 
   foreach (glob($_SERVER['DOCUMENT_ROOT'].'/includes/classes/*.class.php') as $class_filename){
     require_once($class_filename);

@@ -1,5 +1,11 @@
 $(document).ready(function() {
 
+  // AjaxLoad
+  // load first load of posts
+  $('#ajaxLoad').trigger('click');
+  //--> AjaxLoad
+
+
 	// Replace png with svg using modernizr
 	if (!Modernizr.svg) {
 		$('img[src*="svg"]').attr('src', function() {
@@ -17,17 +23,17 @@ $(document).ready(function() {
 
 
   // MixItUp for sorting & filtering
-  $(function () {
+  callMixItUp = function () {
     $('.columns').mixitup({
       targetSelector: '.column__item',
       filterSelector: '.collage__filter a'
     });
-  })
+  };
   //--> MixItUp
 
 
   // init fluidbox
-  $(function () {
+  callFluidbox = function() {
     // Call plugin
     $('.collage__img').fluidbox({
       templates: {
@@ -37,7 +43,16 @@ $(document).ready(function() {
         }
       }
     });
-  });
+  };
   //--> fluidbox
+
+
+  // A function calling the functions that need to
+  // be reinitialised when the dom is editted.
+  // This is more than likely a really fucking dumb way of doing it
+  callKilledFunctions = function() {
+    callFluidbox();
+    callMixItUp();
+  };
 
 });//doc ready
