@@ -21,6 +21,13 @@ $(document).ready(function() {
   }
   // --> Columnizer
 
+  // Remove loading class on body when
+  // ajax has done loading
+  $(document).ajaxComplete(function() {
+    $('body').addClass('isLoaded');
+  });
+  //--> ajaxComplete
+
 
   // MixItUp for sorting & filtering
   callMixItUp = function () {

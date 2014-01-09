@@ -17,7 +17,7 @@ body {
 	font-family: $font-body;
 	color: $color-text;
 	// font-size: $base-font-size;
-	text-align: left;
+	text-align: center;
 	font-style: normal;
 }// body
 
@@ -32,6 +32,9 @@ h6 {
 	font-style: normal;
 }
 
+section {
+	text-align: left;
+}
 
 h3, h4, h5, h6 {
 	color: lighten($color-text, 10%);

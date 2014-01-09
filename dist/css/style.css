@@ -2,6 +2,7 @@
 /*------------------------------------*\
     STYLE.CSS
 \*------------------------------------*/
+/* as per typekit vars*/
 /*------------------------------------*\
     #SETTINGS
 \*------------------------------------*/
@@ -113,6 +114,12 @@ will output all the modifiers, regardless of source-order
   */
 /* 1 */
 /* ========[ Mixin for cross browser svg backgrounds]======== */
+.button__reload {
+  float: none;
+  margin-right: auto;
+  margin-left: auto;
+  text-align: center; }
+
 .nav--main .nav--transition span {
   font: 0/0 a;
   color: transparent;
@@ -1856,6 +1863,41 @@ p + .drop-cap {
  * Extend this object into your markup.
  *
  */
+.button__reload {
+  font-size: 1.3em;
+  padding: 0.5em 1.5em;
+  display: inline-block;
+  cursor: pointer;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  *zoom: 1;
+  filter: progid:DXImageTransform.Microsoft.gradient(gradientType=0, startColorstr='#FF396B9E', endColorstr='#FF1E3853');
+  background-color: #396b9e;
+  border: 0;
+  color: #333333;
+  text-shadow: #6596c7 0 1px 0; }
+  .button__reload:hover {
+    text-decoration: none; }
+  .button__reload:hover {
+    background-color: #325e8b; }
+  .button__reload:active {
+    background-color: #2e5780; }
+  .disabled.button__reload, [disabled].button__reload {
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=60);
+    opacity: 0.6;
+    background: false;
+    cursor: default;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none; }
+  .button__reload::-moz-focus-inner {
+    padding: 0 !important;
+    margin: -1px !important; }
+
+.button__reload:before {
+  padding-right: 0.6em; }
+
 .stylised-form {
   display: table;
   padding: 2em; }
@@ -2060,7 +2102,7 @@ body {
   padding: 0;
   font-family: "Ubuntu-L", "Helvetica Neue", "Helvetica", arial, sans-serif;
   color: #333333;
-  text-align: left;
+  text-align: center;
   font-style: normal; }
 
 h1,
@@ -2072,6 +2114,9 @@ h6 {
   font-family: "KlinicSlabBook", "Goudy Old Style", Garamond, "Big Caslon", "Times New Roman", serif;
   color: #396b9e;
   font-style: normal; }
+
+section {
+  text-align: left; }
 
 h3, h4, h5, h6 {
   color: #4d4d4d;
@@ -2556,7 +2601,8 @@ ul {
   transition-property: transform, opacity; }
 
 .header--main {
-  padding: 0 2em; }
+  padding: 0 2em;
+  text-align: left; }
   @media (max-width: 50em) {
     .header--main {
       padding: 0; } }
@@ -2663,5 +2709,132 @@ ul {
         position: absolute;
         left: -3.5em;
         top: 0.5em; } }
+
+.sexySpinner {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 1;
+  height: 70px;
+  width: 70px;
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%); }
+  .no-js .sexySpinner, .no-css-animations .sexySpinner {
+    background-image: url(../img/spinner.gif);
+    background-position: center center;
+    background-repeat: no-repeat; }
+
+[class^="ball-"] {
+  position: absolute;
+  left: 24px;
+  width: 12px;
+  height: 12px;
+  border-radius: 6px;
+  -moz-transition: 0.5s;
+  -o-transition: 0.5s;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  -moz-animation-name: circleRotate;
+  -webkit-animation-name: circleRotate;
+  animation-name: circleRotate;
+  -moz-animation-duration: 4s;
+  -webkit-animation-duration: 4s;
+  animation-duration: 4s;
+  -moz-animation-iteration-count: infinite;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  -moz-animation-fill-mode: both;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -moz-transform-origin: 0 250% 0 50%;
+  -ms-transform-origin: 0 250% 0 50%;
+  -o-transform-origin: 0 250% 0 50%;
+  -webkit-transform-origin: 0 250% 0 50%;
+  transform-origin: 0 250% 0 50%; }
+  .css-animations [class^="ball-"] {
+    display: block; }
+  .no-css-animations [class^="ball-"], .isLoaded [class^="ball-"] {
+    display: none !important; }
+
+@-moz-keyframes circleRotate {
+  0% {
+    -moz-transform: rotate(0deg);
+    transform: rotate(0deg); }
+
+  100% {
+    -moz-transform: rotate(1440deg);
+    transform: rotate(1440deg); } }
+@-webkit-keyframes circleRotate {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg); }
+
+  100% {
+    -webkit-transform: rotate(1440deg);
+    transform: rotate(1440deg); } }
+@keyframes circleRotate {
+  0% {
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg); }
+
+  100% {
+    -moz-transform: rotate(1440deg);
+    -ms-transform: rotate(1440deg);
+    -o-transform: rotate(1440deg);
+    -webkit-transform: rotate(1440deg);
+    transform: rotate(1440deg); } }
+.ball-1 {
+  background-color: #333333;
+  -moz-animation-timing-function: cubic-bezier(0.5, 0.3, 0.9, 0.9);
+  -webkit-animation-timing-function: cubic-bezier(0.5, 0.3, 0.9, 0.9);
+  animation-timing-function: cubic-bezier(0.5, 0.3, 0.9, 0.9); }
+
+.ball-2 {
+  background-color: #4c4c4c;
+  -moz-animation-timing-function: cubic-bezier(0.5, 0.6, 0.9, 0.9);
+  -webkit-animation-timing-function: cubic-bezier(0.5, 0.6, 0.9, 0.9);
+  animation-timing-function: cubic-bezier(0.5, 0.6, 0.9, 0.9); }
+
+.ball-3 {
+  background-color: #666666;
+  -moz-animation-timing-function: cubic-bezier(0.5, 0.9, 0.9, 0.9);
+  -webkit-animation-timing-function: cubic-bezier(0.5, 0.9, 0.9, 0.9);
+  animation-timing-function: cubic-bezier(0.5, 0.9, 0.9, 0.9); }
+
+.ball-4 {
+  background-color: #7f7f7f;
+  -moz-animation-timing-function: cubic-bezier(0.5, 1.2, 0.9, 0.9);
+  -webkit-animation-timing-function: cubic-bezier(0.5, 1.2, 0.9, 0.9);
+  animation-timing-function: cubic-bezier(0.5, 1.2, 0.9, 0.9); }
+
+.ball-5 {
+  background-color: #999999;
+  -moz-animation-timing-function: cubic-bezier(0.5, 1.5, 0.9, 0.9);
+  -webkit-animation-timing-function: cubic-bezier(0.5, 1.5, 0.9, 0.9);
+  animation-timing-function: cubic-bezier(0.5, 1.5, 0.9, 0.9); }
+
+.ball-6 {
+  background-color: #b2b2b2;
+  -moz-animation-timing-function: cubic-bezier(0.5, 1.8, 0.9, 0.9);
+  -webkit-animation-timing-function: cubic-bezier(0.5, 1.8, 0.9, 0.9);
+  animation-timing-function: cubic-bezier(0.5, 1.8, 0.9, 0.9); }
+
+.ball-7 {
+  background-color: #cccccc;
+  -moz-animation-timing-function: cubic-bezier(0.5, 2.1, 0.9, 0.9);
+  -webkit-animation-timing-function: cubic-bezier(0.5, 2.1, 0.9, 0.9);
+  animation-timing-function: cubic-bezier(0.5, 2.1, 0.9, 0.9); }
+
+.ball-8 {
+  background-color: #e5e5e5;
+  -moz-animation-timing-function: cubic-bezier(0.5, 2.4, 0.9, 0.9);
+  -webkit-animation-timing-function: cubic-bezier(0.5, 2.4, 0.9, 0.9);
+  animation-timing-function: cubic-bezier(0.5, 2.4, 0.9, 0.9); }
 
 /*# sourceMappingURL=style.css.map */

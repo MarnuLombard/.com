@@ -5,6 +5,17 @@
 ?>
 
 <body>
+<!-- A sexy css spinner -->
+<div class="sexySpinner">
+  <span class="ball-1"></span>
+  <span class="ball-2"></span>
+  <span class="ball-3"></span>
+  <span class="ball-4"></span>
+  <span class="ball-5"></span>
+  <span class="ball-6"></span>
+  <span class="ball-7"></span>
+  <span class="ball-8"></span>
+</div>
 <?php include_once 'static/noscript.php'; ?>
 
   <?php include_once 'static/header.php'; ?>
@@ -24,9 +35,9 @@
 <section class="columns collage__wrapper grid" id="ajaxInto">
 </section><!-- // collage__wrapper -->
 
-  <div data-nowLoaded="0" class="button__reload icon-reload" id="ajaxLoad">
+  <button data-nowLoaded="0" class="button__reload icon icon-reload" id="ajaxLoad">
     Load more
-  </div>
+  </button>
 
 	<?php include_once 'static/footer.php'; ?>
 

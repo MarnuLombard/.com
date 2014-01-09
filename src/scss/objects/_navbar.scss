@@ -1,5 +1,6 @@
 .header--main {
 	padding: 0 2em;
+	text-align: left;
 
 	  @include breakpoint(50em) {
 			padding: 0;

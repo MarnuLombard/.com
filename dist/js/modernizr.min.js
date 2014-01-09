@@ -1,5 +1,5 @@
 /* Modernizr 2.7.1 (Custom Build) | MIT & BSD
- * Build: http://modernizr.com/download/#-csscolumns-svg-cssclasses-testprop-testallprops-domprefixes-load
+ * Build: http://modernizr.com/download/#-cssanimations-csscolumns-svg-cssclasses-testprop-testallprops-domprefixes-load
  */
 ;
 
@@ -153,7 +153,10 @@ window.Modernizr = (function( window, document, undefined ) {
           props = (prop + ' ' + (domPrefixes).join(ucProp + ' ') + ucProp).split(' ');
           return testDOMProps(props, prefixed, elem);
         }
-    }
+    }    tests['cssanimations'] = function() {
+        return testPropsAll('animationName');
+    };
+
 
     tests['csscolumns'] = function() {
         return testPropsAll('columnCount');

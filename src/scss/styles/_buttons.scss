@@ -1,0 +1,12 @@
+%stdButton {
+  @include sassy-button;
+}
+
+// the button for the load more calling ajax
+.button__reload {
+  @extend %stdButton;
+  @extend %center;
+  &:before {
+    padding-right: 0.6em;
+  }
+}

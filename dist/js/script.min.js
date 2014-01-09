@@ -31,7 +31,7 @@ $(function (){
 
         if(json.nowLoaded != 'end') {
           // if the alreadyLoaded is any other value other than end, we add the next page link
-          $('#ajaxLoad').replaceWith('<button data-nowLoaded="'+json.nowLoaded+'" class="button__reload icon-reload" id="ajaxLoad">Load more</button>');
+          $('#ajaxLoad').replaceWith('<button data-nowLoaded="'+json.nowLoaded+'" class="button__reload icon icon-reload" id="ajaxLoad">Load more</button>');
         } else {
           $('#ajaxLoad').replaceWith('<p>All posts loaded</p>');
         }
