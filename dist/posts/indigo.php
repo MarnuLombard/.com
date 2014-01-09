@@ -4,7 +4,7 @@ $postData = array(
 
 'tags' => 'Web_Development 2013',
 'markdown' => "
-####Indigo Marketing
+###Indigo Marketing
 This is the redesign of my current employer's site.
 
 **Notable features:**

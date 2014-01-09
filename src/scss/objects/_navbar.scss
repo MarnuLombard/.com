@@ -65,12 +65,12 @@
 	}
 
 	.nav__link {
-		padding: 0 1em;
+		padding: 0 0.3em;
 		text-decoration: none;
 
 	  @include breakpoint(50em) {
 			text-align: center;
-			padding: 0;
+			// padding: 0;
 	  }
 
 	}
@@ -96,7 +96,7 @@
 	  @include breakpoint(50em min-width 31em) {
 			width: 150px;
 			height: 30px;
-			font-size: 15px;
+			// font-size: 15px;
 	  }
 	  @include breakpoint(31em) {
 	  	width: 80px;
@@ -112,13 +112,14 @@
 
 		.touch & span,
 		&:hover span{
-			font-size: 1em;
+			font-size: 1.8em;
 			font-family: $font-headings;
 			line-height: 1;
 			color: $color-text;
 
 		  @include breakpoint(50em) {
-				padding-top: 0.5em
+				padding-top: 0.5em;
+				font-size: 1.2em
 		  }
 		}
 	} // nav--transition

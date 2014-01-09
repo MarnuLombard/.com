@@ -4,8 +4,8 @@ $postData = array(
 
 'tags' => 'Print_Design Branding',
 'markdown' => "
-####HipHopKop
-**Logo**
+###HipHopKop
+######Corporate Identity
 
 HipHopKop was a national HipHop competition (think idols for a different market), aimed mostly at the lower LSMs.
 

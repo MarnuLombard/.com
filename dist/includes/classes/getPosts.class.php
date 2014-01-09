@@ -14,7 +14,10 @@
       $posts_files = glob('posts/*.php');
 
       // Randomise the order
-      shuffle($posts_files);
+      /*
+        # Commented out because fuck you you make my life hard
+        shuffle($posts_files);
+       */
 
       // get contents of the files in an array
       $posts_contents;
