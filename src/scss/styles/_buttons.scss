@@ -4,9 +4,20 @@
 
 // the button for the load more calling ajax
 .button__reload {
-  @extend %stdButton;
-  @extend %center;
-  &:before {
-    padding-right: 0.6em;
+  position: absolute;
+  top: -9999px;
+  left: -9999px;
+
+  .isLoaded & {
+    @extend %stdButton;
+    @extend %center;
+
+    position: initial;
+
+    &:before {
+      padding-right: 0.6em;
+    }
   }
+
+
 }

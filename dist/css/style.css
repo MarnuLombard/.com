@@ -114,20 +114,20 @@ will output all the modifiers, regardless of source-order
   */
 /* 1 */
 /* ========[ Mixin for cross browser svg backgrounds]======== */
-.button__reload {
+.isLoaded .button__reload {
   float: none;
   margin-right: auto;
   margin-left: auto;
   text-align: center; }
 
-.nav--main .nav--transition span {
+.nav__link--transition span {
   font: 0/0 a;
   color: transparent;
   text-shadow: none;
   background-color: transparent;
   border: 0; }
 
-.collage__filter:after, .collage__filter a, .nav--main .nav--transition {
+.collage__filter:after, .collage__filter a, .nav--header .nav__link {
   display: -moz-inline-stack;
   display: inline-block;
   zoom: 1;
@@ -1863,7 +1863,7 @@ p + .drop-cap {
  * Extend this object into your markup.
  *
  */
-.button__reload {
+.isLoaded .button__reload {
   font-size: 1.3em;
   padding: 0.5em 1.5em;
   display: inline-block;
@@ -1877,13 +1877,13 @@ p + .drop-cap {
   border: 0;
   color: #333333;
   text-shadow: #6596c7 0 1px 0; }
-  .button__reload:hover {
+  .isLoaded .button__reload:hover {
     text-decoration: none; }
-  .button__reload:hover {
+  .isLoaded .button__reload:hover {
     background-color: #325e8b; }
-  .button__reload:active {
+  .isLoaded .button__reload:active {
     background-color: #2e5780; }
-  .disabled.button__reload, [disabled].button__reload {
+  .isLoaded .disabled.button__reload, .isLoaded [disabled].button__reload {
     filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=60);
     opacity: 0.6;
     background: false;
@@ -1891,12 +1891,18 @@ p + .drop-cap {
     -moz-box-shadow: none;
     -webkit-box-shadow: none;
     box-shadow: none; }
-  .button__reload::-moz-focus-inner {
+  .isLoaded .button__reload::-moz-focus-inner {
     padding: 0 !important;
     margin: -1px !important; }
 
-.button__reload:before {
-  padding-right: 0.6em; }
+.button__reload {
+  position: absolute;
+  top: -9999px;
+  left: -9999px; }
+  .isLoaded .button__reload {
+    position: initial; }
+    .isLoaded .button__reload:before {
+      padding-right: 0.6em; }
 
 .stylised-form {
   display: table;
@@ -2634,81 +2640,93 @@ ul {
         max-width: 160px;
         min-width: 100px; } }
 
-.nav--main {
+.nav--header {
   display: table;
   width: 100%; }
   @media (min-width: 50em) {
-    .nav--main {
+    .nav--header {
       width: calc(100% + 24px); } }
   @media (max-width: 50em) {
-    .nav--main {
+    .nav--header {
       margin-left: 0; } }
   @media (min-width: 50em) {
-    .nav--main .nav__link__wrapper {
+    .nav--header .nav__link__wrapper {
       width: 43%; } }
-  .nav--main .nav__link {
-    padding: 0 0.3em;
+  .nav--header .icon__wrapper a {
+    color: silver;
     text-decoration: none; }
-    @media (max-width: 50em) {
-      .nav--main .nav__link {
-        text-align: center; } }
-  .nav--main .nav__link img {
+    .nav--header .icon__wrapper a:before {
+      font-size: 3em; }
+  @media (min-width: 31em) {
+    .nav--header .icon__wrapper {
+      text-align: right; }
+      .nav--header .icon__wrapper a {
+        display: block; } }
+  @media (max-width: 31em) {
+    .nav--header .icon__wrapper {
+      padding: 2em; } }
+  @media (min-min-width: 31em) and (max-min-width: 50em) {
+    .nav--header .icon__wrapper {
+      padding-right: 2em; }
+      .nav--header .icon__wrapper a {
+        position: relative;
+        margin-bottom: 1em; }
+        .nav--header .icon__wrapper a:before {
+          font-size: 2em; }
+      .nav--header .icon__wrapper span {
+        position: absolute;
+        left: -3.5em;
+        top: 0.5em; } }
+
+.nav__link {
+  padding: 0 0.3em;
+  text-decoration: none; }
+  .nav--header .nav__link img {
+    width: auto;
     height: 84px;
     height: 8vw;
     min-height: 65px;
-    max-height: 140px;
-    width: auto; }
+    max-height: 140px; }
   @media (max-width: 50em) {
-    .nav--main .nav__link img,
-    .nav--main .nav__link span {
+    .nav--header .nav__link img,
+    .nav--header .nav__link span {
       display: block;
       margin: 0 auto; } }
   @media (min-min-width: 31em) and (max-min-width: 50em) {
-    .nav--main .nav__link span {
+    .nav--header .nav__link span {
       width: 150px;
       height: 30px; } }
   @media (max-width: 31em) {
-    .nav--main .nav__link span {
+    .nav--header .nav__link span {
       width: 80px; } }
-  .nav--main .nav--transition span {
+  .nav--footer .nav__link img {
+    width: auto;
+    height: 40px;
+    height: 4vw;
+    min-height: 20px;
+    max-height: 60px; }
+  .nav--footer .nav__link span {
+    font-family: "KlinicSlabBook", "Goudy Old Style", Garamond, "Big Caslon", "Times New Roman", serif;
+    color: #333333; }
+  .nav--footer .nav__link:hover {
+    border-bottom: 1px solid #333333; }
+  @media (max-width: 50em) {
+    .nav__link {
+      text-align: center; } }
+  .nav__link--transition span {
     -moz-transition: all 0.2s ease-out;
     -o-transition: all 0.2s ease-out;
     -webkit-transition: all 0.2s ease-out;
     transition: all 0.2s ease-out; }
-  .touch .nav--main .nav--transition span, .nav--main .nav--transition:hover span {
+  .touch .nav__link--transition span, .nav__link--transition:hover span {
     font-size: 1.8em;
     font-family: "KlinicSlabBook", "Goudy Old Style", Garamond, "Big Caslon", "Times New Roman", serif;
     line-height: 1;
     color: #333333; }
     @media (max-width: 50em) {
-      .touch .nav--main .nav--transition span, .nav--main .nav--transition:hover span {
+      .touch .nav__link--transition span, .nav__link--transition:hover span {
         padding-top: 0.5em;
         font-size: 1.2em; } }
-  .nav--main .icon__wrapper a {
-    color: silver;
-    text-decoration: none; }
-    .nav--main .icon__wrapper a:before {
-      font-size: 3em; }
-  @media (min-width: 31em) {
-    .nav--main .icon__wrapper {
-      text-align: right; }
-      .nav--main .icon__wrapper a {
-        display: block; } }
-  @media (max-width: 31em) {
-    .nav--main .icon__wrapper {
-      padding: 2em; } }
-  @media (min-min-width: 31em) and (max-min-width: 50em) {
-    .nav--main .icon__wrapper {
-      padding-right: 2em; }
-      .nav--main .icon__wrapper a {
-        position: relative;
-        margin-bottom: 1em; }
-        .nav--main .icon__wrapper a:before {
-          font-size: 2em; }
-      .nav--main .icon__wrapper span {
-        position: absolute;
-        left: -3.5em;
-        top: 0.5em; } }
 
 .sexySpinner {
   position: absolute;
