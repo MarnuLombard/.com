@@ -35,9 +35,11 @@
 <section class="columns collage__wrapper grid" id="ajaxInto">
 </section><!-- // collage__wrapper -->
 
+<section class="button__wrapper">
   <button data-nowLoaded="0" class="button__reload icon icon-reload" id="ajaxLoad">
     Load more
   </button>
+</section>
 
 	<?php include_once 'static/footer.php'; ?>
 

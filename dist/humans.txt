@@ -1,0 +1,36 @@
+/* TEAM */
+
+Web Developer: Marnu Lombard
+
+Contact: MarnuLombard.com/contact
+
+Twitter: @mr_springtime
+
+Location: Johannesburg, South Africa
+
+
+
+/* THANKS */
+
+I use many beautifully crafted plugins and tecnologies.
+They are all open-source and freely available.
+
+(sass-lang.com) Sass, a preprocessor and metalanguage for creating CSS.
+(gruntjs.com) Grunt, a task runner written on
+(nodejs.com) Node.js.
+(github.com/marnulombard/turbo-sansa-boilerplate) Turbo-sansa boilerplate, my own boilerplate for kicking off new projects.
+(jquery.com) Jquery, a beautiful Javascript library for simplifying and extending the code you write.
+(modernizr.com) Modernizr, a library for detecting the capabilities of the browsers your site is viewed in. <br>
+
+The plugins I've used on this project are:
+JS
+  (welcome.totheinter.net/columnizer-jquery-plugin/) Columizer,
+  (terrymun.github.io/Fluidbox/) Fluidbox and
+  (mixitup.io/) MixItUp.
+Sass
+  (breakpoint-sass.com) Breakpoint,
+  (github.com/csswizardry/csscv) CSS CV,
+  (csswizardry.com/csswizardry-grids/) CSSWizardry-Grids,
+  (git.io/normalize) Normalize,
+  (jaredhardy.com/sassy-buttons/) Sassy-Buttons and
+  (typeplate.com) Typeplate

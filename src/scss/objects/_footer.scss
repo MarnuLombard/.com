@@ -1,3 +1,50 @@
-footer {
+.footer {
+  @include modifier(main) {
+    margin-top: 5em; //leave space for spinner
+    padding-top: 1em;
+    border-top: 1px solid $color-grey_Xlight;
 
-}// footer
+    .isLoaded & {
+      margin-top: 2em;
+    }
+
+    .humanstxt,
+    .contentinfo {
+      @extend %center;
+    } // .humanstxt & .contentinfo
+
+    .contentinfo {
+      @extend %even-distribution--wrapper;
+      max-width: 35em;
+      padding: 2em 1em 1.5em;
+      line-height: 0;
+
+      span {
+        @extend %inline-block__hack;
+        font-size: 0.9em;
+      }
+    }// contentinfo
+
+    .contentinfo span,
+    .humanstxt {
+
+      a {
+        color: $color-text;
+
+        &:hover {
+          color: blue;
+        }
+      }// a
+    }
+
+    .humanstxt {
+      font-size: 14px;
+    }// .humanstxt
+
+    strong {
+      font-family: $font-headings;
+      font-size: 1.1em;
+    }
+
+  }// .footer--main
+}// .footer

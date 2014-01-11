@@ -19,6 +19,15 @@ section,
 
  // @include breakpoint(50em) {
 
+// a hack - but it works best and css columns works a little odd
+.button__wrapper {
+  margin-bottom: 1em;
+  text-align: center;
+
+  .isLoaded & { // leave space for spinner initially
+    margin-top: -5em;
+  }
+}
 
 //these are little margin-top magic number hacks
 .mt1	{margin-top: 1px;}
