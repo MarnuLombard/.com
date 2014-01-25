@@ -1,68 +1,33 @@
-.header--main {
+.header
+@include m(main) {
 	padding: 0 2em;
 	text-align: left;
 
-	  @include breakpoint(50em) {
-			padding: 0;
-	  }
-
- .grid__item {
-    display: table-cell;
-    vertical-align: middle;
-
-    @include breakpoint(50em) {
-    	padding-left: 0;
-    }
-
-    @include breakpoint(31em) {
-    	display: block;
-    	text-align: center;
-    	width: 100%;
-    }
+  @include breakpoint(50em) {
+		padding: 0;
   }
 
+	.grid__item {
+	  display: table-cell;
+	  vertical-align: middle;
+	}
+
 	.logo__wrapper {
-	  text-align: center;
-	  padding-left: 1em;
 
-	  @include breakpoint(min-width 50em) {
-	  	padding: 1em;
-	  }
-
-	  @include breakpoint(31em) {
-			padding-top: 1em;
-		}
 	}
 
 	.logo {
-	  height: auto;
-
-		@include breakpoint(min-width 50em) {
-		  width: 100%;
-		  max-width: 160px;
-		  min-width: 100px;
-		}
 
 	}
-}
+}// --main
+}// .header
 
 .nav--header {
   display: table;
   width: 100%;
 
-  @include breakpoint(min-width 50em) {
-	  width: calc(100% + 24px);
-	}
-
-	@include breakpoint(50em) {
-		margin-left: 0;
-	}
-
-
 	.nav__link__wrapper {
-	  @include breakpoint(min-width 50em) {
-	  	width: 43%;
-	  }
+
 	}
 
 	.icon__wrapper {

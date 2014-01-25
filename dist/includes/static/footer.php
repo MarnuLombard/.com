@@ -19,7 +19,7 @@
   <div class="humanstxt">
     I use many beautifully crafted plugins and tecnologies. They are all open-source and freely available. <br>
     <strong>Here's the list:</strong>
-    <a href="http://sass-lang.com" target="_blank">Sass</a>, a preprocessor and metalanguage for creating CSS. <a href="http://gruntjs.com" target="_blank">Grunt</a>, a task runner written on <a href="http://nodejs.com" target="_blank">Node.js</a>. <a href="http://github.com/marnulombard/turbo-sansa-boilerplate" target="_blank">Turbo-sansa boilerplate</a>, my own boilerplate for kicking off new projects. <br>
+    <a href="http://sass-lang.com" target="_blank">Sass</a>, a preprocessor and metalanguage for creating CSS. <a href="http://gruntjs.com" target="_blank">Grunt</a>, a task runner written on <a href="http://nodejs.org" target="_blank">Node.js</a>. <a href="http://github.com/marnulombard/turbo-sansa-boilerplate" target="_blank">Turbo-sansa boilerplate</a>, my own boilerplate for kicking off new projects. <br>
     <a href="http://jquery.com" target="_blank">Jquery</a>, a beautiful Javascript library for simplifying and extending the code you write. <a href="http://modernizr.com" target="_blank">Modernizr</a>, a library for detecting the capabilities of the browsers your site is viewed in. <br>
     <strong>The plugins I've used on this project are:</strong>
     JS &ndash;

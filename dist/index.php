@@ -5,17 +5,7 @@
 ?>
 
 <body>
-<!-- A sexy css spinner -->
-<div class="sexySpinner">
-  <span class="ball-1"></span>
-  <span class="ball-2"></span>
-  <span class="ball-3"></span>
-  <span class="ball-4"></span>
-  <span class="ball-5"></span>
-  <span class="ball-6"></span>
-  <span class="ball-7"></span>
-  <span class="ball-8"></span>
-</div>
+
 <?php include_once 'static/noscript.php'; ?>
 
   <?php include_once 'static/header.php'; ?>
@@ -31,6 +21,18 @@
     <a href="#" data-filter="code_snippets">Code snippets</a>
     <a href="#" data-filter="blog_ramblings">Blog ramblings</a>
   </div><!-- // collage__filter -->
+
+<!-- A loading indicator -->
+<div class="sexySpinner">
+  <span class="ball-1"></span>
+  <span class="ball-2"></span>
+  <span class="ball-3"></span>
+  <span class="ball-4"></span>
+  <span class="ball-5"></span>
+  <span class="ball-6"></span>
+  <span class="ball-7"></span>
+  <span class="ball-8"></span>
+</div>
 
 <section class="columns collage__wrapper grid" id="ajaxInto">
 </section><!-- // collage__wrapper -->
