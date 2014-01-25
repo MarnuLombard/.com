@@ -31,9 +31,17 @@ $(document).ready(function() {
 
   // MixItUp for sorting & filtering
   callMixItUp = function () {
+    var filterElem = '.collage__filter a';
+
+    $(filterElem).on('click', function(event) {
+      event.preventDefault();
+    });
+
     $('.columns').mixitup({
       targetSelector: '.column__item',
-      filterSelector: '.collage__filter a'
+      filterSelector: filterElem,
+      targetDisplayGrid : 'block',
+      targetDisplayList: 'block'
     });
   };
   //--> MixItUp

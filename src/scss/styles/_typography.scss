@@ -56,7 +56,16 @@ a:visited {
 	color: blue;
 }
 
-
 ul {
 	padding-left: 20px;
+}
+
+.error,
+.error a {
+	color: $color-error;
+}
+
+.success,
+.success a {
+	color: $color-success;
 }
