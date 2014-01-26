@@ -1,6 +1,6 @@
 <footer class="footer--main">
   <nav class="nav--footer" role="navigation">
-    <?php echo navLinks($navArray, false); ?>
+    <?php include_once 'static/nav.php'; ?>
   </nav>
 
   <div class="contentinfo" role="contentinfo">

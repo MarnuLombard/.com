@@ -6,7 +6,7 @@
     </a>
 
     <div class="nav__link__wrapper grid__item">
-      <?php echo navLinks($navArray, false); ?>
+      <?php include_once 'static/nav.php'; ?>
     </div>
 
     <div class="grid__item icon__wrapper">
