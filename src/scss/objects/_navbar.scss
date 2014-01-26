@@ -1,156 +1,178 @@
-.header
-@include m(main) {
-	padding: 0 2em;
+.header--main {
 	text-align: left;
 
   @include breakpoint(50em) {
-		padding: 0;
+		padding: 0 2em;
   }
 
-	.grid__item {
-	  display: table-cell;
-	  vertical-align: middle;
-	}
+ .grid__item {
+		display: block;
+		text-align: center;
 
-	.logo__wrapper {
+    @include breakpoint(50em) {
+    	display: table-cell;
+	    vertical-align: middle;
+    }
+  }// grid__item
 
-	}
-
-	.logo {
-
-	}
-}// --main
-}// .header
+}// header--main
 
 .nav--header {
   display: table;
   width: 100%;
+	margin-left: 0;
 
-	.nav__link__wrapper {
-
+  @include breakpoint(50em) {
+	  width: calc(100% + 24px);
 	}
 
-	.icon__wrapper {
+	.logo__wrapper {
+	  text-align: center;
+	  padding-left: 1em;
 
-		a {
-			color: $color-grey_light;
-			text-decoration: none;
+	  @include breakpoint(50em) {
+			width: 8.33333333%;
+	  	padding: 1em;
+	  }
 
-			&:before {
-				font-size: 3em;
-			}
-		} // a
-
-		@include breakpoint(min-width 31em) {
-			text-align: right;
-			a {
-				display: block;
-			}
+	  @include breakpoint(max-width 50em) {
+			padding-top: 1em;
 		}
+	}// logo__wrapper
 
-		@include breakpoint(31em) {
-			padding: 2em;
+	.logo {
+	  height: auto;
+
+		@include breakpoint(50em) {
+		  width: 100%;
+		  max-width: 160px;
+		  min-width: 100px;
 		}
-
-		@include breakpoint(50em min-width 31em) {
-			padding-right: 2em;
-
-			a {
-				position: relative;
-				margin-bottom: 1em;
-				&:before {
-					font-size: 2em;
-				}
-			}
-
-			span {
-				position: absolute;
-				left: -3.5em;
-				top: 0.5em;
-			}
-		}// breakpoint
-	}
-
+	}// logo
 } //.nav--header
+
+/**
+ * The class applied to the .nav__symbol and .nav__icons
+ * spans. To be @extended in
+ */
+%nav__link--transition {
+  @extend %inline-block__hack;
+
+	.nav__text {
+		@extend %screenreader;
+		width: 94px;
+		height: 30px;
+		margin: 0 auto;
+		display: block;
+		text-align: center;
+		@include transition(all 0.2s ease-out);
+
+	  @include breakpoint(50em) {
+			width: auto;
+			height: auto;
+			display: inline;
+			display: inline-block;
+			text-align: left;
+	  }
+	}
+
+	.touch & .nav__text,
+	&:hover .nav__text{
+		font-family: $font-headings;
+		font-size: 1.2em;
+		line-height: 1;
+
+	  @include breakpoint(50em) {
+			font-size: 1.5em;
+	  }
+	}// touch/hover .nav__text
+}
+
+
+.nav--header .nav__link__wrapper {
+	@include breakpoint(50em) {
+	 width: 40%;
+  }
+  @include breakpoint(50em) {
+		text-align: left;
+	}
+}// .nav--header .nav__link__wrapper,
+
+.nav--header .icon__wrapper {
+	@include breakpoint(50em) {
+	 width: 10%;
+  }
+}
+
 
 
 .nav__link {
 	padding: 0 0.3em;
 	text-decoration: none;
+}// nav__link
 
-	.nav--header & {
-		@extend %inline-block__hack;
 
-		img {
-			width: auto;
-			height: 84px;
-		  height: 8vw;
-		  min-height: 65px;
-		  max-height: 140px;
-		}// img
+.nav--header .nav__link {
+	@extend %nav__link--transition;
 
-		img,
-		span {
-		  @include breakpoint(50em) {
-				display: block;
-				margin: 0 auto;
-		  }
-		}// img & span
+	.nav__symbol {
+		width: auto;
+		height: 84px;
+	  height: 8vw;
+	  min-height: 65px;
+	  max-height: 140px;
+	}// .nav__symbol
 
-		span {
-		  @include breakpoint(50em min-width 31em) {
-				width: 150px;
-				height: 30px;
-				// font-size: 15px;
-		  }
-		  @include breakpoint(31em) {
-		  	width: 80px;
-		  }
-	  }// span
+	.nav__text {
+		color: $color-text;
+	}// .nav__symbol & .nav__text
+}
 
-	}// nav--footer &
+.nav--footer .nav__link {
+	img {
+		width: auto;
+		height: 40px;
+	  height: 4vw;
+	  min-height: 20px;
+	  max-height: 60px;
+	}// img
 
-	.nav--footer & {
-		img {
-			width: auto;
-			height: 40px;
-		  height: 4vw;
-		  min-height: 20px;
-		  max-height: 60px;
-		}// img
+	.nav__text {
+		font-family: $font-headings;
+		color: $color-text;
+	}
 
-		span {
-			font-family: $font-headings;
-			color: $color-text;
-		}
+	&:hover {
+		border-bottom: 1px solid $color-text;
+	}
+}// nav footer .nav__link
 
-		&:hover {
-			border-bottom: 1px solid $color-text;
-		}
-	}// nav footer &
+.icon__wrapper {
 
 	@include breakpoint(50em) {
-		text-align: center;
-  }
+		text-align: right;
+	}
 
-  @include modifier(transition) {
-  	span {
-			@extend %screenreader;
-			@include transition(all 0.2s ease-out);
+	.icon {
+		@extend %nav__link--transition;
+		color: $color-grey_light;
+		text-decoration: none;
+
+		@include breakpoint(50em) {
+			display: block;
 		}
 
-		.touch & span,
-		&:hover span{
-			font-size: 1.8em;
-			font-family: $font-headings;
-			line-height: 1;
-			color: $color-text;
+		&:before {
+			font-size: 2em;
+			@include breakpoint(50em) {
+				font-size: 3em;
+			}
+		}
 
-		  @include breakpoint(50em) {
-				padding-top: 0.5em;
-				font-size: 1.2em
-		  }
-		}// touch/hover span
-  }
+		.nav__text {
+			color: $color-grey_light;
+		}
+	} // icon
 
-}// nav__link
+
+}
