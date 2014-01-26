@@ -60,6 +60,10 @@ ul {
 	padding-left: 20px;
 }
 
+strong {
+	font-family: $font-headings;
+}
+
 .error,
 .error a {
 	color: $color-error;
@@ -68,4 +72,55 @@ ul {
 .success,
 .success a {
 	color: $color-success;
+}
+
+.lead {
+	@extend strong;
+	font-size: 1.2em;
+	line-height: 1.5;
+}
+
+.text {
+	@include e(wrapper) {
+		margin-right: auto;
+		margin-left: auto;
+
+		@include breakpoint(55em) {
+			width: 66%;
+    }
+
+		@include breakpoint(80em) {
+      text-align: justify;
+    }
+
+    @include breakpoint(90em) {
+    	width: 50%;
+    }
+	}// text__wrapper
+
+
+	@include e(columns) {
+		@include break-inside(avoid-column);
+
+		@include breakpoint(55em) {
+			@include column-fill(balance);
+      @include column-count(2);
+      @include column-gap(45px);
+    }
+
+    @include breakpoint(130em) {
+      @include column-count(3);
+    }
+
+    p {
+    	@include break-inside(avoid);
+			@include experimental(page-break-inside, avoid);
+			@include column-break-inside(avoid);
+    }
+	}// text--wrapper
+
+	@include m(indent) {
+		display: block;
+		padding-left: 1em;
+	}
 }
