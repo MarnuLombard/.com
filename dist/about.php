@@ -21,7 +21,7 @@
     </p>
 
     <p>
-      I'm a web developer living in Johannesburg, South Africa. My skillset lies predominantly in the front-end (<em>not a euphamism</em>), but my knowledge and use of PHP pushes me into the realm of a &ldquo;full-stack&rdquo; developer.
+      I'm a web developer living in Johannesburg, South Africa. My skill-set lies predominantly in the front-end (<em>not a euphemism</em>), but my knowledge and use of PHP pushes me into the realm of a &ldquo;full-stack&rdquo; developer.
     </p>
     <p>
       My biggest back-end claims to fame are that I:
