@@ -11,9 +11,24 @@
   <?php include_once 'static/header.php'; ?>
 
   <section class="">
-    <h1></h1>
+    <h1>Get in contact with me</h1>
 
-    <?php print_r($_GET); ?>
+    <form class="stylised-form grid" action="<?=$_SERVER['PHP_SELF'];?>" method="post">
+      <label class="label grid__item" for="name">Your name</label>
+      <input class="input grid__item" type="text" name="name" id="name">
+
+      <label class="label grid__item" for="address">Your email address</label>
+      <input class="input grid__item" type="email" name="address" id="address">
+
+      <label class="label label--fullwidth grid__item" for="message">Your message</label>
+      <textarea class="textarea grid__item" name="message" id="mssage" cols="30" rows="10"></textarea>
+
+      <input class="input noshow" type="text" name="text" id="text">
+
+      <button class="submit">Send a message</button>
+    </form>
+
+
 
   </section>
 

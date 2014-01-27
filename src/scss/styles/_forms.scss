@@ -1,19 +1,32 @@
 .stylised-form {
-	display: table;
+	@extend %center;
+	max-width: 1200px;
 	padding: 2em;
 
+	.label {
+		margin: 0 0.5em;
+		padding: 0;
+		font-size: 1.2em;
+		font-family: $font-headings;
+		text-align: left;
+
+		@include m(fullwidth) {
+			display: block;
+		}
+	}
+
 	.input {
-		width: 80%;
-		margin-left: 10%;
 	}
 
 	.input,
 	.textarea {
+		@include border-radius(3px);
+		margin-bottom: 1em;
 		padding: 0.3em;
+		border: 1px solid $color-grey_light;
 		font-size: 0.9em;
 		font-weight: 200;
-		@include border-radius(3px);
-		border: 1px solid $color-grey_light;
+		text-align: left;
 
 		&:focus {
 			outline-offset: -2px;
@@ -21,17 +34,40 @@
 		}
 	}
 
-	.label {
-		margin: 0.4em 1.5em 0.8em 0;
-		clear: both;
-		font-family: $font-headings;
+	// I'm gonna do things backwards here for DRYness' sake
+	@include breakpoint(44em) {
+		.label {
+			width: 30%;
+			margin: 0;
+		}
+		.input {
+			width: 70%;
+		}
 	}
+	/*
+	@include breakopint() {
+
+	} */
 
 	.submit {
-		margin-top: 1.6em;
-		padding: 0.8em 0.4em;
-		font-family: $font-headings;
-		font-size: 1.1em;
+		@include sassy-button;
+		margin: 0 auto;
+	}
+
+	/**
+	* This bit is a clever no-javascript anti-spam method.
+	* Essentially if the bot fills in this field then we reject it
+	* Thusly we hide it visually
+	*/
+	.noshow {
+		width: 100% !important;
+		height: 1px;
+		height: 0;// for browsers woth height 0 bugs
+		margin: 0;
+		padding: 0;
+		visibility: hidden;
+		@include opacity(0);
+		overflow: hidden;
 	}
 
 }// form

@@ -73,11 +73,11 @@
   */
 /* 1 */
 /* ========[ Mixin for cross browser svg backgrounds]======== */
-.isLoaded .button__reload, .footer--main .humanstxt,
+.isLoaded .button__reload, .stylised-form, .footer--main .humanstxt,
 .footer--main .contentinfo {
   float: none;
-  margin-right: auto;
-  margin-left: auto;
+  margin-right: auto !important;
+  margin-left: auto !important;
   text-align: center; }
 
 .nav--header .nav__link .nav__text, .icon__wrapper .icon .nav__text {
@@ -1869,33 +1869,88 @@ noscript .error {
   background-color: #f5797c; }
 
 .stylised-form {
-  display: table;
-  padding: 2em; }
-  .stylised-form .input {
-    width: 80%;
-    margin-left: 10%; }
+  max-width: 1200px;
+  padding: 2em;
+  	/*
+  	@include breakopint() {
+  
+  	} */
+  /**
+  * This bit is a clever no-javascript anti-spam method.
+  * Essentially if the bot fills in this field then we reject it
+  * Thusly we hide it visually
+  */ }
+  .stylised-form .label {
+    margin: 0 0.5em;
+    padding: 0;
+    font-size: 1.2em;
+    font-family: "KlinicSlabMedium", "Goudy Old Style", Garamond, "Big Caslon", "Times New Roman", serif;
+    text-align: left; }
+    .stylised-form .label--fullwidth {
+      display: block; }
   .stylised-form .input,
   .stylised-form .textarea {
-    padding: 0.3em;
-    font-size: 0.9em;
-    font-weight: 200;
     -moz-border-radius: 3px;
     -webkit-border-radius: 3px;
     border-radius: 3px;
-    border: 1px solid silver; }
+    margin-bottom: 1em;
+    padding: 0.3em;
+    border: 1px solid silver;
+    font-size: 0.9em;
+    font-weight: 200;
+    text-align: left; }
     .stylised-form .input:focus,
     .stylised-form .textarea:focus {
       outline-offset: -2px;
       outline: #5e91c5 auto 5px; }
-  .stylised-form .label {
-    margin: 0.4em 1.5em 0.8em 0;
-    clear: both;
-    font-family: "KlinicSlabMedium", "Goudy Old Style", Garamond, "Big Caslon", "Times New Roman", serif; }
+  @media (min-width: 44em) {
+    .stylised-form .label {
+      width: 30%;
+      margin: 0; }
+    .stylised-form .input {
+      width: 70%; } }
   .stylised-form .submit {
-    margin-top: 1.6em;
-    padding: 0.8em 0.4em;
-    font-family: "KlinicSlabMedium", "Goudy Old Style", Garamond, "Big Caslon", "Times New Roman", serif;
-    font-size: 1.1em; }
+    font-size: 1.3em;
+    padding: 0.5em 1.5em;
+    display: inline-block;
+    cursor: pointer;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    *zoom: 1;
+    filter: progid:DXImageTransform.Microsoft.gradient(gradientType=0, startColorstr='#FF396B9E', endColorstr='#FF1E3853');
+    background-color: #396b9e;
+    border: 0;
+    color: #333333;
+    text-shadow: #6596c7 0 1px 0;
+    margin: 0 auto; }
+    .stylised-form .submit:hover {
+      text-decoration: none; }
+    .stylised-form .submit:hover {
+      background-color: #325e8b; }
+    .stylised-form .submit:active {
+      background-color: #2e5780; }
+    .stylised-form .submit.disabled, .stylised-form .submit[disabled] {
+      filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=60);
+      opacity: 0.6;
+      background: false;
+      cursor: default;
+      -moz-box-shadow: none;
+      -webkit-box-shadow: none;
+      box-shadow: none; }
+    .stylised-form .submit::-moz-focus-inner {
+      padding: 0 !important;
+      margin: -1px !important; }
+  .stylised-form .noshow {
+    width: 100% !important;
+    height: 1px;
+    height: 0;
+    margin: 0;
+    padding: 0;
+    visibility: hidden;
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+    opacity: 0;
+    overflow: hidden; }
 
 .icon:before {
   speak: none;
