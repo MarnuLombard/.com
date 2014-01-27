@@ -51,10 +51,10 @@
       I write about web-related things at <a href="http://blog.marnulombard.com">blog.marnulombard.com</a>.
     </p>
     <p>
-      I'm always available for freelance work, <a href="/contact?freelance">get hold of me about it here</a>.
+      I'm always available for freelance work, <a href="/contact?about=freelance_work">get hold of me about it here</a>.
     </p>
     <p>
-      If you would like to contact me regarding a permanent job offer, <a href="/contact?permanent">get hold of me about it here</a>.
+      If you would like to contact me regarding a permanent job offer, <a href="/contact?about=permanent_work">get hold of me about it here</a>.
     </p>
   </section>
 

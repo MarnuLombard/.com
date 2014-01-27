@@ -67,7 +67,7 @@
   .column__item {
    margin-bottom: 2em;
    padding: 0;
-   display: table !important;
+   // display: table;
    border: 4px solid $color-grey_Xlight;
 
    @include transition(border 0.3s ease-in);

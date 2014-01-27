@@ -2469,7 +2469,6 @@ strong, .lead {
   .collage__wrapper .column__item {
     margin-bottom: 2em;
     padding: 0;
-    display: table !important;
     border: 4px solid #d9d9d9;
     -moz-transition: border 0.3s ease-in;
     -o-transition: border 0.3s ease-in;
