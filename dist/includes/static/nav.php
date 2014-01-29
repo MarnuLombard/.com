@@ -3,7 +3,7 @@
  * Array containing the names of each of the pages
  * @var array
  */
-  $navArray = array('about', 'work', 'ramblings', 'contact');
+  $navArray = array('about', 'cv', 'ramblings', 'contact');
 
   $html = '';
   $class = 'nav__link ';

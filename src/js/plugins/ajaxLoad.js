@@ -10,7 +10,7 @@ $(function (){
     $(this).addClass(loadingClass);
 
     $.ajax({
-      url: 'getPosts.php',
+      url: 'includes/ajax/getPosts.php',
       // url: 'delete.json',
       type: 'post',
       dataType: 'json',
