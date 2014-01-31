@@ -20,14 +20,15 @@
        */
 
       // get contents of the files in an array
-      $posts_contents;
+      $posts_contents = '';
 
       foreach ($posts_files as $key => $value) {
         // load posts file
         require $value;
+        $root = $_SERVER['DOCUMENT_ROOT'];
 
         // Define vars to push into the "top-level" array
-        $name     = str_replace(array('posts/','.php'), '', $value);
+        $name     = str_replace(array($root.'/posts/','.php'), '', $value);
         $image    = 'img/portfolio/full/'.$name.'.jpg';
         $thumb    = 'img/portfolio/thumbs/'.$name.'.jpg';
         $tags     = str_replace('_', ' ', $postData['tags']);

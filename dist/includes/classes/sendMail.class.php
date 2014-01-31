@@ -46,10 +46,10 @@ class sendMail
     $headers .= "X-Mailer: PHP". phpversion() ."\r\n";
 
     mail($to, $subject, $message, $headers);
-  }
+  }// composeMail
 
 
-}
+}// class sendMail
 
 
 ?>
