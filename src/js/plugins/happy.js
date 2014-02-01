@@ -3,6 +3,7 @@
     return (''.trim) ? el.val().trim() : $.trim(el.val());
   }
   $.fn.isHappy = function (config) {
+    // console.log(config);
     var fields = [], item;
 
     function getError(error) {
@@ -58,10 +59,13 @@
         el.val(val);
 
         // get the value
-        gotFunc = ((val.length > 0 || required === 'sometimes') && isFunction(opts.test));
+        gotFunc = (
+          (val.length > 0 || required === 'sometimes')
+          && isFunction(opts.test)
+        );
 
         // check if we've got an error on our hands
-        if (submit === true && required === true && val.length === 0) {
+        if (required === true && val.length === 0) {
           error = true;
         } else if (gotFunc) {
           error = !opts.test(val, arg);

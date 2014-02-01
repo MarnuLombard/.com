@@ -13,7 +13,7 @@
   <section class="">
     <h1>Get in contact with me</h1>
 
-    <form class="stylised-form grid" action="<?=$_SERVER['PHP_SELF'];?>" method="post">
+    <form class="stylised-form grid" id="contactForm" action="<?=$_SERVER['PHP_SELF'];?>" method="post">
       <label class="label grid__item" for="name">Your name</label>
       <input class="input grid__item" type="text" name="name" id="name">
 
@@ -21,7 +21,7 @@
       <input class="input grid__item" type="email" name="address" id="address">
 
       <label class="label label--fullwidth grid__item" for="message">Your message</label>
-      <textarea class="textarea grid__item" name="message" id="mssage" cols="30" rows="10"></textarea>
+      <textarea class="textarea grid__item" name="message" id="message" cols="30" rows="10"></textarea>
 
       <input class="input noshow" type="text" name="text" id="text">
 

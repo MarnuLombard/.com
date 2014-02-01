@@ -28,6 +28,31 @@ $(document).ready(function() {
   });
   //--> ajaxComplete
 
+  // Happy.js
+  // Strightforward error checking for forms
+    // First check if form exists on page
+  if ($('#contactForm').length > 0) {
+    $('#contactForm').isHappy({
+      when: 'keyup',
+
+      fields: {
+        '#name' : {
+          required: true,
+          message: 'Please enter your name. Make sure it&rsquo;s over two characters.',
+        },
+        '#address' : {
+          required: true,
+          message: 'Please enter your email address. Should be a valid address too.',
+          test: happy.email // this can be *any* function that returns true or false
+        },
+        '#message' : {
+          required: true,
+          message: 'You should say at least something&hellip;'
+        }
+      }
+    });
+  }
+
 
   // MixItUp for sorting & filtering
   callMixItUp = function () {

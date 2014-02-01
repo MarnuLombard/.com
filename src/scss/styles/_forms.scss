@@ -69,5 +69,24 @@
 		@include opacity(0);
 		overflow: hidden;
 	}
-
 }// form
+
+
+/*==========  Happy.js classes  ==========*/
+span.unhappyMessage {
+	@extend .grid__item;// so as to fix letter-spacing/word-spacing
+	margin: -1em 0 1em;// inputs have 1em margin-bottom.
+	color:$color-error;
+	text-align: right;
+}
+
+.unhappy {
+	outline-color: $color-error;
+	outline-style: auto;
+	outline-width:  5px;
+	outline-offset: -2px;
+
+	&:focus {
+		outline-color: darken($color-error, 20%) !important;
+	}
+}
