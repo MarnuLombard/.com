@@ -8,7 +8,8 @@
 
   $postsArray = $getPosts->makeArray($_POST['nowLoaded']);
 
-  echo json_encode($postsArray)
+
+  echo json_encode($postsArray);
   // print_r($postsArray);
 
 ?>

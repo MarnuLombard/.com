@@ -6,7 +6,7 @@
     require_once($class_filename);
   }
 
-  foreach (glob($_SERVER['DOCUMENT_ROOT'].'/includes/functions/*.php') as $func_filename){
+  foreach (glob($_SERVER['DOCUMENT_ROOT'].'/includes/functions/*.func.php') as $func_filename){
     require_once($func_filename);
   }
 

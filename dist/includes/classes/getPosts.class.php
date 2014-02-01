@@ -10,8 +10,10 @@
     public function makeArray($alreadyLoaded)
     {
 
+      $root = $_SERVER['DOCUMENT_ROOT'];
+
       // Get all posts as one multi-dimentional array
-      $posts_files = glob('posts/*.php');
+      $posts_files = glob($root.'/posts/*.php');
 
       // Randomise the order
       /*
@@ -25,7 +27,6 @@
       foreach ($posts_files as $key => $value) {
         // load posts file
         require $value;
-        $root = $_SERVER['DOCUMENT_ROOT'];
 
         // Define vars to push into the "top-level" array
         $name     = str_replace(array($root.'/posts/','.php'), '', $value);
