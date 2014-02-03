@@ -7,7 +7,7 @@ $legacy-support-for-ie: true !default;
 //////////////////////////////
 @mixin vertical-center {
   display: table-cell;
-  vertical-align: middle;
+  vertical-align: top;
 
   @if $legacy-support-for-ie {
     margin-top: inherit;

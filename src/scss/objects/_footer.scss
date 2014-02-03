@@ -19,22 +19,24 @@
       padding: 2em 1em 1.5em;
       line-height: 0;
 
-      span {
+      .block {
         @extend %inline-block__hack;
         font-size: 0.9em;
+        min-height: 1em;// seems to be a lot of hacking to get these to behave properly as block level elements
+
+        .icon { // vertical-align: top is needed for inline-block__hack (tried middle)
+          line-height: inherit;// this makes sure it matches parent
+        }
       }
     }// contentinfo
 
-    .contentinfo span,
-    .humanstxt {
+    .contentinfo a.block,
+    .humanstxt a {
+      color: $color-text;
 
-      a {
-        color: $color-text;
-
-        &:hover {
-          color: blue;
-        }
-      }// a
+      &:hover {
+        color: blue;
+      }
     }
 
     .humanstxt {

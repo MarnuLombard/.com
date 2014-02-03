@@ -5,15 +5,17 @@
 
   <div class="contentinfo" role="contentinfo">
 
-    <span class="copyright">
+    <span class="block copyright">
       &copy; <?= date('Y'); ?> Marnu Lombard
     </span>
-    <span class="github">
-      <a href="https://github.com/marnulombard/" class="icon icon-github" target="_blank">Github</a>
-    </span>
-    <span class="twitter">
-      <a href="http://twitter.com/mr_springtime" class="icon icon-twitter" target="_blank">Twitter</a>
-    </span>
+    <a href="https://github.com/marnulombard/" class="block" target="_blank">
+      <span class="icon icon-github"></span>
+      Github
+    </a>
+    <a href="http://twitter.com/mr_springtime" class="block" target="_blank">
+      <span class="icon icon-twitter"></span>
+      Twitter
+    </a>
   </div>
 
   <div class="humanstxt">
