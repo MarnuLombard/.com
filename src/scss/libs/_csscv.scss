@@ -331,7 +331,25 @@ a {
         }
 
     }
+}
 
+/**
+ * Lists indicating a value where you should want a 3/5 0r 5/5 style system
+ * This style only defines the list as it relates to the csscv system- not the rating items themselves
+ * 1. Reset font-family because mono-spaced is too wide
+ * 2. Retain it on the :before & :after for the "  on .string
+ */
+.rating-list {
+  font-family: none; /* [1] */
+
+  &:before,
+  &:after {
+    font-family: monospace, monospace;
+  }
+
+  > i {
+    font-size: 0.6em;
+  }
 }
 
 
