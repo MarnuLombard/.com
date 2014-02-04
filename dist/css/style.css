@@ -1990,17 +1990,11 @@ span.unhappyMessage {
 .icon-github:before {
   content: "\f100"; }
 
-.icon-rating--empty:before {
+.icon-reload:before {
   content: "\f101"; }
 
-.icon-rating--full:before {
-  content: "\f102"; }
-
-.icon-reload:before {
-  content: "\f103"; }
-
 .icon-twitter:before {
-  content: "\f104"; }
+  content: "\f102"; }
 
 body * {
   zoom: 1;
