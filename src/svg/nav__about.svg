@@ -29,7 +29,7 @@
 			<use xlink:href="#SVGID_4_"  style="overflow:visible;"/>
 		</clipPath>
 		<g style="opacity:0.15;clip-path:url(#SVGID_6_);">
-			<polygon style="fill:#231F20;" points="22.352,41.324 40.346,30.936 40.363,30.907 40.363,51.686 31.365,46.49 31.35,46.52 			
+			<polygon style="fill:#231F20;" points="22.352,41.324 40.346,30.936 40.363,30.907 40.363,51.686 31.365,46.49 31.35,46.52
 				"/>
 		</g>
 	</g>
@@ -71,7 +71,7 @@
 			<use xlink:href="#SVGID_11_"  style="overflow:visible;"/>
 		</clipPath>
 		<g style="display:none;clip-path:url(#SVGID_12_);">
-			<polygon style="display:inline;opacity:0.15;fill:#231F20;enable-background:new    ;" points="5,44 43,44 42.425,16.58 
+			<polygon style="display:inline;opacity:0.15;fill:#231F20;enable-background:new    ;" points="5,44 43,44 42.425,16.58
 				29,24.33 29,34.33 4.999,20.474 			"/>
 		</g>
 	</g>
@@ -85,7 +85,7 @@
 		</clipPath>
 		<g style="clip-path:url(#SVGID_14_);">
 			<g>
-				<polygon style="opacity:0.15;fill:#231F20;enable-background:new    ;" points="42.425,16.58 29,24.331 29,34.33 29,44 43,44 
+				<polygon style="opacity:0.15;fill:#231F20;enable-background:new    ;" points="42.425,16.58 29,24.331 29,34.33 29,44 43,44
 									"/>
 			</g>
 			<g>

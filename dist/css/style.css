@@ -296,8 +296,8 @@ section:after,
     margin-bottom: 1.5rem;
     /* [1] */ }
   .csscv .spaced--large {
-    margin-bottom: 120px;
-    margin-bottom: 7.5rem; }
+    margin-bottom: 48px;
+    margin-bottom: 3rem; }
   .csscv .indented {
     padding-left: 1.25em; }
   .csscv {
@@ -310,7 +310,8 @@ section:after,
     padding-bottom: 0;
     color: white;
     background-color: #222830; }
-  .csscv a {
+  .csscv a,
+  .csscv a:visited {
     color: inherit; }
   .csscv .selector {
     color: #a0c25e;
@@ -353,6 +354,8 @@ section:after,
       content: ";";
       /* [1] */
       color: #999999; }
+    .csscv .value.with-inline-comment {
+      float: left; }
   .csscv .string {
     color: #70ade0; }
     .csscv .string:before, .csscv .string:after {
@@ -391,6 +394,8 @@ section:after,
       content: "/* "; }
     .csscv .comment:after {
       content: " */"; }
+    .with-inline-comment + .csscv .comment:after {
+      clear: both; }
   .csscv .comment-block {
     color: #656565; }
     .csscv .comment-block:before, .csscv .comment-block:after {

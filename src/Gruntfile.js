@@ -29,7 +29,7 @@ module.exports = function(grunt) {
       },
       svg: {
         files: ['svg/*'],
-        tasks: ['svgmin']
+        tasks: ['svgmin', 'svg2png']
       },
       livereload: {
         options: { livereload: true },
@@ -58,6 +58,17 @@ module.exports = function(grunt) {
           dest: '../dist/img/',
           ext: '.svg'
         }]
+      }
+    },
+
+    // convert svg to png for fallbacks (via modernizr)
+    svg2png: {
+      all: {
+        // specify files in array format with multiple src-dest mapping
+        files: [
+          // rasterize all SVG files in "img" and its subdirectories to "img/png"
+          { src: ['svg/*.svg'], dest: '../dist/img/' }
+        ]
       }
     },
 
@@ -145,23 +156,10 @@ module.exports = function(grunt) {
       }
     },
 
-    // Create a list of all the Todos in the project
-    // todos: {
-    //   options: {
-    //     priorities : {
-    //      low : null,
-    //      med : /TODO/,
-    //      high : /FIXME/
-    //     },
-    //     verbose: false
-    //   },
-    //   TODO : ['scss/*', 'scss/**/*', 'js/*.js' , 'js/**/*.js' , '../dist/*.php' , '../dist/includes/**/*.php']
-    // }
-
   });
 
   // register task
   grunt.registerTask('dev', ['watch']);
-  grunt.registerTask('dist', ['sass:dist', 'concat:dist', 'uglify:dist', 'svgmin:dist']);
+  grunt.registerTask('dist', ['sass:dist', 'concat:dist', 'uglify:dist', 'svgmin', 'svg2png' ]);
 
 };

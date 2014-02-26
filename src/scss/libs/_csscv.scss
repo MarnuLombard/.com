@@ -109,7 +109,8 @@
     background-color: $color--background;
 }
 
-a {
+a,
+a:visited {
     color: inherit;
 }
 
