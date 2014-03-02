@@ -137,22 +137,48 @@
         <dt class="property">Responsibilities</dt>
         <dd class="value">
           <ul class="value-list">
-            <li>Repro-readying print materials</li>
-            <li>Design, development &amp; distribution of email newsletters</li>
-            <li>Server administration</li>
-            <li>Design &amp; development of websites</li>
-            <li>Problem resolution between studio &amp; management</li>
-            <li>Management of studio worklfows</li>
             <li>Online campaign conceptualisation &amp; design</li>
             <li>Print campaign conceptualisation &amp; design</li>
-            <li></li></ul></dd>
+            <li>Design &amp; development of websites</li>
+            <li>Server administration</li>
+            <li>Repro-readying print materials</li>
+            <li>Design, development &amp; distribution of email newsletters</li>
+            <li>Problem resolution between studio &amp; management</li>
+            <li>Management of studio worklfows</li></ul></dd>
 
         <dt class="property">Notes</dt>
         <dd class="value"><span class="string">
           I was initially hired as a graphic designer with a knowledhge of HTML &amp; CSS. Which I did well, all the while brushing up my web knowledge and learning PHP as well as Javascript. Over time, web development has become one of the company's largest revenue streams and I have been promoted to head up the studio as senior graphic designer.
         </span></dd>
         </dl>
-    </div><!-- // ruleset.languages -->
+    </div><!-- // ruleset.indigo -->
+
+
+    <div class="ruleset">
+      <h4 class="selector"><span class="modifier" data-namespace="job">Indigo</span></h4>
+
+      <dl class="declarations">
+        <dt class="property">Company</dt>
+        <dd class="value"><span class="string">Indigo Marketing</span></dd>
+
+        <dt class="property">Title</dt>
+        <dd class="value"><span class="string">DTP Art Director <em>(with minor web developer duties)</em></span></dd>
+
+        <dt class="property">From</dt>
+        <dd class="value"><span class="string">February, 2009</span></dd>
+
+        <dt class="property">To</dt>
+        <dd class="value"><span class="string">December, 2010</span></dd>
+
+        <dt class="property">Responsibilities</dt>
+        <dd class="value">
+          <ul class="value-list">
+            <li>Repro-readying print materials</li>
+            <li>Implimentation of concepts from Art Directors</li>
+            <li>Print campaign design</li>
+            <li>Graphic Design</li>
+            <li>Design &amp; development of websites</li></ul></dd>
+    </div><!-- // ruleset.bbdo -->
   </section><!-- // csscv -->
 
   <?php include_once 'static/footer.php'; ?>

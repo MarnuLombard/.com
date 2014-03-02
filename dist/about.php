@@ -15,9 +15,7 @@
       About me
     </h1>
     <p class="lead">
-      Who likes this stuff? <br>
-      Who reads this? <br>
-      Thank god for analytics...
+      I build websites. Called it a web app, a product, a mobisite - whatever you wish. I work with clients to create customised solutions to solve <strong>their</strong> particular problems. There is never a one size fits all solution, so my clients and I work together to find what their online needs are and to fill them.
     </p>
 
     <p>
