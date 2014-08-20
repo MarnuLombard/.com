@@ -19,6 +19,8 @@
     <a href="#" data-filter="laravel">Laravel</a>
     <a href="#" data-filter="print_design">Print design</a>
     <a href="#" data-filter="web_design">Web design</a>
+    <a href="#" data-filter="2013">Print design</a>
+    <a href="#" data-filter="2014">Web design</a>
     <a href="#" data-filter="under_development">Under development</a>
   </div><!-- // collage__filter -->
 
