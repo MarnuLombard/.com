@@ -10,6 +10,6 @@
 
 
   echo json_encode($postsArray);
-  // print_r($postsArray);
+
 
 ?>

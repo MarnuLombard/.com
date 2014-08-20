@@ -119,7 +119,7 @@
 
     <p class="comment-block">
       <span class="comment-block__line">
-        This is my current place of employment
+        Reason fir leaving: A better offer was made to me
       </span>
     </p>
     <div class="ruleset">
