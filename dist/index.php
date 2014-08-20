@@ -14,12 +14,12 @@
   <div class="collage__filter">
   <h4>Filter items</h4>
     <a href="#" data-filter="all" class="current">All Categories</a>
-    <a href="#" data-filter="web_development">Web development</a>
+    <a href="#" data-filter="front_end_development">Front-end development</a>
+    <a href="#" data-filter="back_end_development">Back-end development</a>
+    <a href="#" data-filter="laravel">Laravel</a>
     <a href="#" data-filter="print_design">Print design</a>
-    <a href="#" data-filter="under_development">Under develoment</a>
-    <a href="#" data-filter="open_source">Open source</a>
-    <a href="#" data-filter="code_snippets">Code snippets</a>
-    <a href="#" data-filter="blog_ramblings">Blog ramblings</a>
+    <a href="#" data-filter="web_design">Web design</a>
+    <a href="#" data-filter="under_development">Under development</a>
   </div><!-- // collage__filter -->
 
 <!-- A loading indicator -->

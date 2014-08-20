@@ -16,10 +16,10 @@
       <span class="comment-block__line">The Curriculum Vitae of Marnu Lombard.</span>
       <span class="comment-block__line"></span>
       <span class="comment-block__line">I'm a front end web-developer, with a history in graphic design.</span>
-      <span class="comment-block__line">If you would like to know more about me have a look at my [<a href="/about">about page</a>] (http://marnulombard.com/about)</span>
+      <span class="comment-block__line">If you would like to know more about me have a look at my [<a href="/about">about page</a>] <span class="url">http://marnulombard.com/about</span></span>
       <span class="comment-block__line"></span>
       <span class="comment-block__line">If you would prefer to have a look at a more traditional CV,</span>
-      <span class="comment-block__line">[<a href="/downloads/marnu%20lombard%cv.pdf">you can download a pdf here</a>] (http://marnulombard.com/downloads/marnu%20lombard%cv.pdf)</span>
+      <span class="comment-block__line">[<a href="/downloads/marnu%20lombard%cv.pdf">you can download a pdf here</a>] <span class="url">http://marnulombard.com/downloads/marnu%20lombard%cv.pdf</span></span>
 
     </h1>
 
@@ -41,7 +41,7 @@
 
         <dt class="property">Skills</dt>
         <dd class="value"><ul class="value-list">
-          <li><span class="string">Front-end Develoment</span></li>
+          <li><span class="string">Front-end Development</span></li>
           <li>Web Design</li>
           <li>UI Design</li>
           <li>Sass</li>
@@ -61,7 +61,7 @@
 
         <dl class="declarations">
           <dt class="property">Email</dt>
-          <dd class="value"><?=hideMail('marnu@marnulombard.com');?></dd>
+          <dd class="value"><span class="url"><?=hideMail('marnu@marnulombard.com');?></span></dd>
 
           <dt class="property">Website</dt>
           <dd class="value"><span class="url"><a href="http://marnulombard.com/">marnulombard.com</a></span></dd>
@@ -70,7 +70,7 @@
           <dd class="value"><span class="url"><a href="https://github.com/marnulombard/">github.com/marnulombard</a></span></dd>
 
           <dt class="property">Twitter</dt>
-          <dd class="value"><a href="https://twitter.com/mr_springtime/">@mr_springtime</a></dd>
+          <dd class="value"><span class="url"><a href="https://twitter.com/mr_springtime/">@mr_springtime</a></span></dd>
       </dl>
     </div><!-- // ruleset.me––contact -->
 
@@ -80,7 +80,7 @@
     </p>
 
     <div class="ruleset">
-      <h3 class="selector">practical-aplications</h3>
+      <h3 class="selector">practical-applications</h3>
 
       <dl class="declarations">
         <dt class="property">languages</dt>
@@ -95,14 +95,15 @@
 
         <dt class="property">libraries / frameworks</dt>
         <dd class="value"><ul class="value-list">
-            <li><span class="string">jQuery</span> <span class="url">js</span></li>
-            <li><span class="string">Laravel</span> <span class="url">php</span></li>
-            <li><span class="string">Wordpress</span> <span class="url">php</span></li>
-            <li><span class="string">Habari</span> <span class="url">php</span></li></ul></dd>
+            <li><span class="string">jQuery</span> (js)</li>
+            <li><span class="string">Laravel</span> (php)</li>
+            <li><span class="string">Wordpress</span> (php)</li>
+            <li><span class="string">Symfony</span> (php)</li></ul></dd>
 
         <dt class="property">applications</dt>
         <dd class="value"><ul class="value-list">
             <li><span class="string">Photoshop</span></li>
+            <li><span class="string">PhpStorm</span></li>
             <li><span class="string">Sublime Text</span></li>
             <li><span class="string">OmniGraffle</span></li>
             <li><span class="string">Terminal</span></li>
@@ -137,29 +138,30 @@
         <dt class="property">Responsibilities</dt>
         <dd class="value">
           <ul class="value-list">
-            <li>Online campaign conceptualisation &amp; design</li>
-            <li>Print campaign conceptualisation &amp; design</li>
+            <li>Online campaign conceptualization &amp; design</li>
+            <li>Print campaign conceptualization &amp; design</li>
             <li>Design &amp; development of websites</li>
             <li>Server administration</li>
             <li>Repro-readying print materials</li>
             <li>Design, development &amp; distribution of email newsletters</li>
             <li>Problem resolution between studio &amp; management</li>
-            <li>Management of studio worklfows</li></ul></dd>
+            <li>Management of studio work-flows</li></ul></dd>
 
         <dt class="property">Notes</dt>
         <dd class="value"><span class="string">
-          I was initially hired as a graphic designer with a knowledhge of HTML &amp; CSS. Which I did well, all the while brushing up my web knowledge and learning PHP as well as Javascript. Over time, web development has become one of the company's largest revenue streams and I have been promoted to head up the studio as senior graphic designer.
+          I was initially hired as a graphic designer with a knowledge of HTML &amp; CSS. Which I did well, all the while brushing up my web knowledge and learning PHP as well as Javascript. Over time, web development has become one of the company's largest revenue streams and I have been promoted to head up the studio.
         </span></dd>
         </dl>
     </div><!-- // ruleset.indigo -->
 
 
     <div class="ruleset">
-      <h4 class="selector"><span class="modifier" data-namespace="job">Indigo</span></h4>
+      <h4 class="selector"><span class="modifier" data-namespace="job">BBDO</span></h4>
 
       <dl class="declarations">
         <dt class="property">Company</dt>
-        <dd class="value"><span class="string">Indigo Marketing</span></dd>
+        <dd class="value"><span class="string">Net#work BBDO</span></dd>
+        <span class="comment">Now 140 BBDO</span>
 
         <dt class="property">Title</dt>
         <dd class="value"><span class="string">DTP Art Director <em>(with minor web developer duties)</em></span></dd>
@@ -174,7 +176,7 @@
         <dd class="value">
           <ul class="value-list">
             <li>Repro-readying print materials</li>
-            <li>Implimentation of concepts from Art Directors</li>
+            <li>Implementation of concepts from Art Directors</li>
             <li>Print campaign design</li>
             <li>Graphic Design</li>
             <li>Design &amp; development of websites</li></ul></dd>
