@@ -1,12 +1,4 @@
-*~
-.DS_Store
-delete
+.delete
 node_modules
-*.sublime-project
-*.project-workspace
-*.sublime-workspace
-sql.config.php
-.sass-cache
 test
-sftp-config.json
 .idea

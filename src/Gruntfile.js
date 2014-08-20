@@ -89,11 +89,10 @@ module.exports = function(grunt) {
     sass: {
       dev: {
         options: {
-          sourcemap: true,
           style: 'nested',
           precision: '2',
           compass: true,
-          cache: 'delete/'
+          cache: '.delete/'
         },
         files: {
           '../dist/css/style.css':'scss/style.scss',
@@ -102,11 +101,10 @@ module.exports = function(grunt) {
       },
       dist: {
         options: {
-          sourcemap: false,
           style: 'compressed',
           precision: '2',
           compass: true,
-          cache: 'delete/'
+          cache: '.delete/'
         },
         files: {
           '../dist/css/style.css':'scss/style.scss',
