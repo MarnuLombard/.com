@@ -68,6 +68,9 @@
           <dt class="property">Website</dt>
           <dd class="value"><span class="url"><a href="http://marnulombard.com/">marnulombard.com</a></span></dd>
 
+          <span class="comment-block__line">
+            My repositories are largely hosted privately. Access available on request.
+          </span>
           <dt class="property">GitHub</dt>
           <dd class="value"><span class="url"><a href="https://github.com/marnulombard/">github.com/marnulombard</a></span></dd>
 
@@ -119,7 +122,43 @@
 
     <p class="comment-block">
       <span class="comment-block__line">
-        Reason fir leaving: A better offer was made to me
+        This is my current place of employment
+      </span>
+    </p>
+    <div class="ruleset">
+      <h4 class="selector"><span class="modifier" data-namespace="job">Black</span></h4>
+
+      <dl class="declarations">
+        <dt class="property">Company</dt>
+        <dd class="value"><span class="string">Black Africa Group</span></dd>
+
+        <dt class="property">Title</dt>
+        <dd class="value"><span class="string">Lead Developer &amp; Digital Designer</span></dd>
+
+        <dt class="property">From</dt>
+        <dd class="value"><span class="string">September, 2014</span></dd>
+
+        <dt class="property">To</dt>
+        <dd class="value"><span class="string">Present</span></dd>
+
+        <dt class="property">Responsibilities</dt>
+        <dd class="value">
+          <ul class="value-list">
+            <li>Design &amp; development of websites</li>
+            <li>Print campaign conceptualization &amp; design</li>
+            <li>Server administration</li>
+            <li>Management of studio work-flows</li></ul></dd>
+
+        <dt class="property">Notes</dt>
+        <dd class="value"><span class="string">
+          Seeing as it’s the 20th of August today, I am writing this from the <em>fuuutuuure</em>. So no notes for the time being.
+        </span></dd>
+        </dl>
+    </div><!-- // ruleset.black -->
+
+    <p class="comment-block">
+      <span class="comment-block__line">
+        Reason for leaving: A better offer was made to me
       </span>
     </p>
     <div class="ruleset">
@@ -127,7 +166,7 @@
 
       <dl class="declarations">
         <dt class="property">Company</dt>
-        <dd class="value"><span class="string">Indigo Marketing</span></dd>
+        <dd class="value"><span class="string">Indigo Marketing / Indigo New Media</span></dd>
 
         <dt class="property">Title</dt>
         <dd class="value"><span class="string">Studio Head / Web developer &amp; Graphic Designer</span></dd>
@@ -136,14 +175,13 @@
         <dd class="value"><span class="string">February, 2011</span></dd>
 
         <dt class="property">To</dt>
-        <dd class="value"><span class="string">Present</span></dd>
+        <dd class="value"><span class="string">August, 2014</span></dd>
 
         <dt class="property">Responsibilities</dt>
         <dd class="value">
           <ul class="value-list">
-            <li>Online campaign conceptualization &amp; design</li>
-            <li>Print campaign conceptualization &amp; design</li>
             <li>Design &amp; development of websites</li>
+            <li>Print campaign conceptualization &amp; design</li>
             <li>Server administration</li>
             <li>Repro-readying print materials</li>
             <li>Design, development &amp; distribution of email newsletters</li>
@@ -152,7 +190,7 @@
 
         <dt class="property">Notes</dt>
         <dd class="value"><span class="string">
-          I was initially hired as a graphic designer with a knowledge of HTML &amp; CSS. Which I did well, all the while brushing up my web knowledge and learning PHP as well as Javascript. Over time, web development has become one of the company's largest revenue streams and I have been promoted to head up the studio.
+          I was initially hired as a graphic designer with a knowledge of HTML &amp; CSS. Which I did well, all the while brushing up my web knowledge and learning PHP as well as Javascript. Over time, web development became the company's main focus, they rebranded to “Indigo New Media” from “Indigo Marketing” and I was promoted to head up the studio.
         </span></dd>
         </dl>
     </div><!-- // ruleset.indigo -->
