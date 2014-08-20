@@ -2,10 +2,10 @@
 
 $postData = array(
 
-'tags' => 'Web_Development 2013',
+'tags' => 'Front_End_Development Back_End_Development Web_Design 2013',
 'markdown' => "
 ###Indigo Marketing
-This is the redesign of my current employer's site.
+This is the redesign of an ex-employer's site
 
 **Notable features:**
 

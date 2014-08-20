@@ -2,7 +2,7 @@
 
 $postData = array(
 
-'tags' => 'Web_Development 2014',
+'tags' => 'Front_End_Development Web_Design 2014',
 'markdown' => "
 ###Corruption Watch Connected
 A collaborative platform created for Corruption Watch.

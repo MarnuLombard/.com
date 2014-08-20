@@ -2,19 +2,17 @@
 
 $postData = array(
 
-'tags' => 'Web_Development 2013 Under_Development',
+'tags' => 'Front_End_Development Back_End_Development Web_Design 2014 Laravel Devops',
 'markdown' => "
 ###Kainav Conservation Foundation
-In the early parts of the build, but have a look at the [github repo here.](https://github.com/MarnuLombard/kainav)
+A pro-bono job for a conservation foundation. Two really great twin brothers
 
 **Notable features:**
 
-*   A new build structure, finally fully seperating *src* and *dist*
-*   Using [grunt.js](http://www.gruntjs.com) to automate my build process
-*   Written to be hooked up to a database, ie. all sections are foreach( echo'ed) out from an array instead of static content
-
-[Live site](http://www.kainavconservation.co.za/index.php)
-
-*username:* kainav , *password:* kainav"
+* A custom simple CMS built on top  of Laravel
+* Hosted on my private server
+* So from server-stack, through database, to PHP backend, to front-end & design is all done by me
+* Using new-relic to track app performance
+[Live site](http://www.kainavconservation.org)",
 );
 ?>

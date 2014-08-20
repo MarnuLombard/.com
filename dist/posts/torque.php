@@ -2,7 +2,7 @@
 
 $postData = array(
 
-'tags' => 'Web_Development 2013',
+'tags' => 'Print_Design 2013',
 'markdown' => "
 ###Torque IT
 ######Cloud Computing Ad
