@@ -68,11 +68,9 @@
           <dt class="property">Website</dt>
           <dd class="value"><span class="url"><a href="http://marnulombard.com/">marnulombard.com</a></span></dd>
 
+          <span class="comment">My repositories are largely hosted privately. Access available on request.</span>
           <dt class="property">GitHub</dt>
           <dd class="value"><span class="url"><a href="https://github.com/marnulombard/">github.com/marnulombard</a></span></dd>
-          <span class="comment">
-            My repositories are largely hosted privately. Access available on request.
-          </span>
 
           <dt class="property">Twitter</dt>
           <dd class="value"><span class="url"><a href="https://twitter.com/mr_springtime/">@mr_springtime</a></span></dd>
