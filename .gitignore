@@ -9,3 +9,4 @@ sql.config.php
 .sass-cache
 test
 sftp-config.json
+.idea
