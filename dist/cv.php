@@ -15,7 +15,8 @@
     <h1 class="comment-block  spaced--large">
       <span class="comment-block__line">The Curriculum Vitae of Marnu Lombard.</span>
       <span class="comment-block__line"></span>
-      <span class="comment-block__line">I'm a front end web-developer, with a history in graphic design.</span>
+      <span class="comment-block__line">I'm a full-stack end web-developer, with a history in graphic design.</span>
+      <span class="comment-block__line">I have an absolute passion for PHP development (back-end), but know my way around the front-end well too.</span>
       <span class="comment-block__line">If you would like to know more about me have a look at my [<a href="/about">about page</a>] <span class="url">http://marnulombard.com/about</span></span>
       <span class="comment-block__line"></span>
       <span class="comment-block__line">If you would prefer to have a look at a more traditional CV,</span>
@@ -34,22 +35,23 @@
         <dd class="value"><span class="string">Marnu lombard</span></dd>
 
         <dt class="property">Job</dt>
-        <dd class="value"><span class="string">Front-End Web Developer</span></dd>
+        <dd class="value"><span class="string">Full-stack Web Developer</span></dd>
 
         <dt class="property">Location</dt>
         <dd class="value"><span class="string">Johannesburg, South Africa</span></dd>
 
         <dt class="property">Skills</dt>
         <dd class="value"><ul class="value-list">
+          <li><span class="string">Back-end Development</span></li>
           <li><span class="string">Front-end Development</span></li>
           <li>Web Design</li>
           <li>UI Design</li>
+          <li>PHP</li>
           <li>Sass</li>
-          <li>OOCSS</li>
-          <li>Grunt / NodeJS</li>
+          <li>OOP</li>
+          <li>Grunt</li>
           <li><span class="string">Responsive Web Design</span></li>
           <li>Git</li>
-          <li><span class="string">Developing through a CMS</span></li>
           <li>jQuery</li></ul></dd>
       </dl>
     </div><!-- // ruleset.me -->
@@ -86,25 +88,26 @@
         <dt class="property">languages</dt>
         <dd class="value with-inline-comment">
           <ul class="value-list">
+            <li>php</li>
             <li>html</li>
             <li>css</li>
             <li>javascript</li>
-            <li>php</li>
           </ul></dd>
         <span class="comment">Minor knowledge of others</span>
 
         <dt class="property">libraries / frameworks</dt>
         <dd class="value"><ul class="value-list">
-            <li><span class="string">jQuery</span> (js)</li>
             <li><span class="string">Laravel</span> (php)</li>
+            <li><span class="string">jQuery</span> (js)</li>
             <li><span class="string">Wordpress</span> (php)</li>
+            <li><span class="string">Vagrant</span> (server management)</li>
             <li><span class="string">Symfony</span> (php)</li></ul></dd>
 
         <dt class="property">applications</dt>
         <dd class="value"><ul class="value-list">
-            <li><span class="string">Photoshop</span></li>
             <li><span class="string">PhpStorm</span></li>
             <li><span class="string">Sublime Text</span></li>
+            <li><span class="string">Photoshop</span></li>
             <li><span class="string">OmniGraffle</span></li>
             <li><span class="string">Terminal</span></li>
             <li><span class="string">Illustrator</span></li>
