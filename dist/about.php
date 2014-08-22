@@ -19,34 +19,19 @@
     </p>
 
     <p>
-      I'm a web developer living in Johannesburg, South Africa. My skill-set lies predominantly in the front-end (<em>not a euphemism</em>), but my knowledge and use of PHP pushes me into the realm of a &ldquo;full-stack&rdquo; developer.
+      I'm a web developer living in Johannesburg, South Africa. My skill-set lies across the web stack, in that I have knowledge of DNS; Database and Server installation; using PHP MVC frameworks to create complex apps; HTML, Javascript and CSS to create the user-facing side of a site.
     </p>
     <p>
-      My biggest back-end claims to fame are that I:
-      <ol class="mt-20">
-        <li>built a bespoke cms from the ground up and used it in production and,</li>
-        <li>set up a web server running Ubuntu from the command line. I set up the mail server and DNS on it too (<em>booya!</em>).</li>
-      </ol>
+      Every free moment I have, you'll find me reading articles on development or browsing github repositories. This is my passion, and I have an insatiable thirst for more knowledge, a new way to create &amp; code.
     </p>
-
     <p>
-      Instead of the standard html, css, js stack&mdash; I generally develop using the following:
-    </p>
-
-    <p class="text--indent">
-      <strong>PHP</strong> to include database calls and eliminate repetition (include() for templates, foreach() for recurring blocks of content);
-    </p>
-    <p class="text--indent">
-      <strong>Sass</strong> as a preprocessor for css. This allows me to use variables and various methods of logic to generate the css rules;
-    </p>
-    <p class="text--indent">
-      <strong>Jquery</strong> as a js library. While I do realise that <strong>Jquery is still javascript</strong>, I am one of those naughty developers that automatically includes it in my builds. There are very few projects of mine that don't use it- but I am excited to have the time to try write all my functions (<em>plugins</em>) from scratch on a build;
+      Besides my work, the thing I Love most in the world is my little Daughter.
     </p>
   </section><!--// text__wrapper -->
 
   <section class="text__wrapper">
     <p>
-      I write about web-related things at <a href="http://blog.marnulombard.com">blog.marnulombard.com</a>.
+      I fully intend to write about web-related things at <a href="http://blog.marnulombard.com">blog.marnulombard.com</a>.
     </p>
     <p>
       I'm always available for freelance work, <a href="/contact?about=freelance_work">get hold of me about it here</a>.
